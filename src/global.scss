@@ -1,0 +1,213 @@
+:root {
+  // color names from https://www.color-name.com
+
+  // color
+  --color-bg: #27363b; //Outer Space
+  --color-glow: #ebebeb20; //Gallery (10% opacity)
+
+  --color-text-h1: #f2e9e9; //Soft Peach
+  --color-text-h2: #d8eacc; //Zanah
+  --color-text-h3: #f8bc5c; //Rajah
+  --color-text-h4: #f5d095; //Manhattan
+  --color-text-h5: #f5d095; //Manhattan
+  --color-text-p: #ede4db; //Pearl Bush
+  --color-text-caption: #d8d8d8; //Alto
+  --color-text-glow: #ebebeb3e; //Gallery (20% opacity)
+
+  --color-text-link-primary: #bb95f5; //Bright Lavender
+  --color-text-link-secondary: #93deca; //Algae Green
+
+  --color-button-primary: #00ada5; //Persian Green
+  --color-button-primary: #f4ede72c; //Dawn Pink (20% opacity)
+
+  --color-reef: #c7ffa3; //Reef
+
+  // typography
+  --font-family-primary-extrabold: "Satoshi-extrabold", sans-serif;
+  --font-family-primary-bold: "Satoshi-bold", sans-serif;
+  --font-family-primary-medium: "Satoshi-medium", sans-serif;
+  --font-family-primary-regular: "Satoshi-regular", sans-serif;
+}
+
+/* Fonts */
+
+/* Satoshi */
+/* https://www.fontshare.com/fonts/satoshi */
+
+@font-face {
+  font-family: "Satoshi";
+  font-display: swap;
+  /* it works like this if the file sits in dist and doesn't load through webpack */
+  /* src: url('fonts/Satoshi.woff2') format('truetype'); */
+
+  /* it works like this if used in webpack */
+  src: url("./fonts/Satoshi.woff2") format("truetype");
+}
+
+////////
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+}
+
+main {
+  padding: 1rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: Satoshi, sans-serif;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  color: var(--color-text-h1);
+  font-size: 3rem;
+  line-height: 1.25;
+  text-shadow: 0 0 1rem var(--color-glow);
+}
+
+h2 {
+  font-family: Satoshi, sans-serif;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  color: var(--color-text-h2);
+  font-size: 2.25rem;
+  line-height: 1.33;
+}
+
+h3 {
+  font-family: Satoshi, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+  color: var(--color-text-h3);
+  font-size: 1.5rem;
+  line-height: 1.45;
+}
+
+h3 {
+  font-family: Satoshi, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+  color: var(--color-text-h3);
+  font-size: 1.625rem;
+  line-height: 1.45;
+}
+
+// assign h4
+h4 {
+  font-family: Satoshi, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+  color: var(--color-text-h3);
+  font-size: 1.5rem;
+  line-height: 1.45;
+}
+
+h5 {
+  font-family: Satoshi, sans-serif;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+  color: var(--color-text-h5);
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+
+p {
+  font-family: Satoshi, sans-serif;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+  color: var(--color-text-p);
+  font-size: 1.125rem;
+  line-height: 1.45;
+  max-width: 54rem;
+
+  b {
+    font-weight: 900;
+    font-variation-settings: "wght" 900;
+  }
+
+  a {
+    cursor: pointer;
+    transition: 0.2s all ease;
+    &:hover {
+      text-shadow: 0 0 0.5rem var(--color-text-glow);
+      text-decoration: underline;
+    }
+  }
+
+  .link {
+    font-weight: 900;
+    font-variation-settings: "wght" 900;
+
+    &.primary {
+      color: var(--color-text-link-primary);
+    }
+
+    &.secondary {
+      color: var(--color-text-link-secondary);
+    }
+  }
+}
+
+.caption {
+  font-family: Satoshi, sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+  color: var(--color-text-caption);
+  font-size: 1.375rem;
+  line-height: 1.45;
+}
+
+.section {
+  min-height: 100vh;
+  margin: 0 3rem;
+  max-width: 72rem;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+
+  .glow-wrapper {
+    box-shadow: 0 0 2rem var(--color-glow);
+    border-radius: 1rem;
+    padding: 2rem;
+
+    &.small {
+      padding: 1rem;
+    }
+  }
+}
+
+.columns-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  &.two-third {
+    &:first-child {
+      width: 75%;
+    }
+  }
+
+  &.one-third {
+    div {
+      width: 33.33%;
+    }
+  }
+
+  &.half {
+    div {
+      width: 50%;
+    }
+  }
+
+  .glow-wrapper:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
