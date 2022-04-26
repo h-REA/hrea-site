@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69.375" height="62" viewBox="0 0 69.375 62">
+  <defs>
+    <style>
+      .building-cls-1 {
+        fill: none;
+        stroke: #f8bc5c;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="building" transform="translate(-1.5 -2.5)">
+    <path id="Path_21" data-name="Path 21" class="building-cls-1" d="M4,63V4H40.875V63" transform="translate(2.688)"/>
+    <path id="Path_22" data-name="Path 22" class="building-cls-1" d="M18,10h7.375V46.875" transform="translate(40.313 16.125)"/>
+    <path id="Path_23" data-name="Path 23" class="building-cls-1" d="M21.438,8h7.375M3,52.25H69.375M21.438,22.75h7.375" transform="translate(0 10.75)"/>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188" height="188" viewBox="0 0 188 188">
+  <defs>
+    <style>
+      .circle-2-cls-1, .circle-2-cls-3 {
+        fill: none;
+      }
+
+      .circle-2-cls-1 {
+        stroke: #93deca;
+        stroke-linecap: round;
+        stroke-width: 5px;
+        stroke-dasharray: 10 10;
+        opacity: 0.452;
+      }
+
+      .circle-2-cls-2 {
+        stroke: none;
+      }
+
+      .circle-2-cls-4 {
+        filter: url(#circle-2);
+      }
+    </style>
+    <filter id="circle-2" x="0" y="0" width="188" height="188" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="circle-2-cls-4" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <g id="circle-2-2" data-name="circle-2" class="circle-2-cls-1" transform="translate(15 15)">
+      <circle class="circle-2-cls-2" cx="79" cy="79" r="79"/>
+      <circle class="circle-2-cls-3" cx="79" cy="79" r="76.5"/>
+    </g>
+  </g>
+</svg>

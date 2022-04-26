@@ -1,0 +1,114 @@
+.hero-visual-wrapper {
+  margin: 2rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .hero-visual-circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .circle {
+      position: absolute;
+
+      // bright green circle
+      &.one {
+        left: 4rem;
+        top: 3rem;
+        opacity: 0.8;
+        -webkit-animation: spin 25s linear infinite;
+        -moz-animation: spin 25s linear infinite;
+        animation: spin 25s linear infinite;
+      }
+
+      // teal circle
+      &.two {
+        left: 0rem;
+        top: 9rem;
+        -webkit-animation: spin-reverse 30s linear infinite;
+        -moz-animation: spin-reverse 30s linear infinite;
+        animation: spin-reverse 30s linear infinite;
+      }
+
+      // darker green circle
+      &.three {
+        left: 4rem;
+        top: 15rem;
+        -webkit-animation: spin-reverse 50s linear infinite;
+        -moz-animation: spin-reverse 50s linear infinite;
+        animation: spin-reverse 50s linear infinite;
+      }
+
+      // purple circle
+      &.four {
+        left: 6.5rem;
+        top: 13rem;
+        -webkit-animation: spin 40s linear infinite;
+        -moz-animation: spin 40s linear infinite;
+        animation: spin 40s linear infinite;
+      }
+
+      // rusty circle
+      &.five {
+        left: 10rem;
+        top: 6rem;
+        -webkit-animation: spin-reverse 50s linear infinite;
+        -moz-animation: spin-reverse 50s linear infinite;
+        animation: spin-reverse 50s linear infinite;
+      }
+
+      // grey circle
+      &.six {
+        left: 6rem;
+        top: 0rem;
+        -webkit-animation: spin-reverse 35s linear infinite;
+        -moz-animation: spin-reverse 35s linear infinite;
+        animation: spin-reverse 35s linear infinite;
+      }
+    }
+  }
+}
+
+//spin animation
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+// spin reverse animation
+
+@-moz-keyframes spin-reverse {
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes spin-reverse {
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}

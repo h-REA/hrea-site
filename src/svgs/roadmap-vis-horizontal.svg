@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1027" height="209" viewBox="0 0 1027 209">
+  <defs>
+    <style>
+      .roadmap-horizontal-cls-1 {
+        fill: none;
+        stroke: #f5d095;
+        stroke-linecap: round;
+        stroke-width: 3px;
+        stroke-dasharray: 10;
+      }
+
+      .roadmap-horizontal-cls-2 {
+        fill: #27363b;
+      }
+
+      .roadmap-horizontal-cls-3, .roadmap-horizontal-cls-5, .roadmap-horizontal-cls-6, .roadmap-horizontal-cls-7 {
+        fill: #fff;
+      }
+
+      .roadmap-horizontal-cls-3, .roadmap-horizontal-cls-5 {
+        font-size: 18px;
+      }
+
+      .roadmap-horizontal-cls-3 {
+        font-family: Satoshi-Bold, Satoshi;
+        font-weight: 700;
+      }
+
+      .roadmap-horizontal-cls-4 {
+        fill: #707070;
+        font-size: 20px;
+        font-family: HelveticaNeue, Helvetica Neue;
+      }
+
+      .roadmap-horizontal-cls-5, .roadmap-horizontal-cls-6 {
+        font-family: Satoshi-Medium, Satoshi;
+        font-weight: 500;
+      }
+
+      .roadmap-horizontal-cls-6 {
+        font-size: 16px;
+      }
+
+      .roadmap-horizontal-cls-7 {
+        font-size: 14px;
+        font-family: Satoshi-Regular, Satoshi;
+      }
+
+      .roadmap-horizontal-cls-8 {
+        filter: url(#Path_24-3);
+      }
+
+      .roadmap-horizontal-cls-9 {
+        filter: url(#Path_24-2);
+      }
+
+      .roadmap-horizontal-cls-10 {
+        filter: url(#Path_24);
+      }
+    </style>
+    <filter id="Path_24" x="0" y="15" width="169" height="169" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.341"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_24-2" x="404" y="15" width="169" height="169" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#fff" flood-opacity="0.341"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_24-3" x="626" y="0" width="199" height="199" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-3"/>
+      <feFlood flood-color="#f5d095"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="roadmap-vis" transform="translate(30 45.249)">
+    <line id="Line_1" data-name="Line 1" class="roadmap-horizontal-cls-1" x2="988" transform="translate(7.5 54.425)"/>
+    <g id="Group_39" data-name="Group 39">
+      <g class="roadmap-horizontal-cls-10" transform="matrix(1, 0, 0, 1, -30, -45.25)">
+        <path id="Path_24-4" data-name="Path 24" class="roadmap-horizontal-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(30 45)"/>
+      </g>
+      <text id="Oct_2018" data-name="Oct 2018" class="roadmap-horizontal-cls-3" transform="translate(16 61.751)"><tspan x="0" y="0">Oct 2018</tspan></text>
+    </g>
+    <text id="July_2022" data-name="July
+2022" class="roadmap-horizontal-cls-4" transform="translate(692 47.751)"><tspan x="-17.97" y="0">July</tspan><tspan x="-22.24" y="28">2022</tspan></text>
+    <text id="Goal_for_MMR" data-name="Goal for MMR" class="roadmap-horizontal-cls-5" transform="translate(637 137.751)"><tspan x="0" y="0">Goal for MMR</tspan></text>
+    <text id="hREA_ad_hoc_dev_phase_started" data-name="hREA ad hoc 
+dev phase started" class="roadmap-horizontal-cls-6" transform="translate(0 137.751)"><tspan x="0" y="0">hREA ad hoc </tspan><tspan x="0" y="22">dev phase started</tspan></text>
+    <text id="Kickstart_of_current_development_phase" data-name="Kickstart of current
+development phase" class="roadmap-horizontal-cls-6" transform="translate(458 137.751)"><tspan x="-68.904" y="0">Kickstart of current</tspan><tspan x="-70.704" y="22">development phase</tspan></text>
+    <text id="First_applications_on_top_of_hREA_are_built" data-name="First applications
+on top of hREA 
+are built" class="roadmap-horizontal-cls-7" transform="translate(893 87.751)"><tspan x="0" y="0">First applications</tspan><tspan x="0" y="18">on top of hREA </tspan><tspan x="0" y="36">are built</tspan></text>
+    <g id="Group_40" data-name="Group 40" transform="translate(404)">
+      <g class="roadmap-horizontal-cls-9" transform="matrix(1, 0, 0, 1, -434, -45.25)">
+        <path id="Path_24-5" data-name="Path 24" class="roadmap-horizontal-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(434 45)"/>
+      </g>
+      <text id="May_2022" data-name="May 2022" class="roadmap-horizontal-cls-3" transform="translate(12 61.751)"><tspan x="0" y="0">May 2022</tspan></text>
+    </g>
+    <g id="Group_41" data-name="Group 41" transform="translate(641)">
+      <g class="roadmap-horizontal-cls-8" transform="matrix(1, 0, 0, 1, -671, -45.25)">
+        <path id="Path_24-6" data-name="Path 24" class="roadmap-horizontal-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(671 45)"/>
+      </g>
+      <text id="August_2022-2" data-name="August 2022" class="roadmap-horizontal-cls-3" transform="translate(12 61.751)"><tspan x="0" y="0">Aug 2022</tspan></text>
+    </g>
+  </g>
+</svg>

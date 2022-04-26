@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="59" height="58.5" viewBox="0 0 59 58.5">
+  <defs>
+    <style>
+      .gift-cls-1 {
+        fill: none;
+        stroke: #f8bc5c;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="gift" transform="translate(-0.5 -0.5)">
+    <path id="Path_18" data-name="Path 18" class="gift-cls-1" d="M48.077,12V39.548H4V12" transform="translate(3.51 17.548)"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" class="gift-cls-1" width="56" height="14" transform="translate(2 15.5)"/>
+    <line id="Line_5" data-name="Line 5" class="gift-cls-1" y1="42" transform="translate(30 15.5)"/>
+    <path id="Path_19" data-name="Path 19" class="gift-cls-1" d="M24.284,15.774h-12.4A6.887,6.887,0,0,1,11.887,2C21.529,2,24.284,15.774,24.284,15.774Z" transform="translate(5.264)"/>
+    <path id="Path_20" data-name="Path 20" class="gift-cls-1" d="M12,15.774H24.4A6.887,6.887,0,0,0,24.4,2C14.755,2,12,15.774,12,15.774Z" transform="translate(17.548)"/>
+  </g>
+</svg>

@@ -1,9 +1,11 @@
+@import "mixin";
+
 :root {
   // color names from https://www.color-name.com
 
   // color
   --color-bg: #27363b; //Outer Space
-  --color-glow: #ebebeb20; //Gallery (10% opacity)
+  --color-glow: #ebebeb30; //Gallery (10% opacity)
 
   --color-text-h1: #f2e9e9; //Soft Peach
   --color-text-h2: #d8eacc; //Zanah
@@ -20,7 +22,7 @@
   --color-button-primary: #00ada5; //Persian Green
   --color-button-primary: #f4ede72c; //Dawn Pink (20% opacity)
 
-  --color-reef: #c7ffa3; //Reef
+  --color-reef: #c4ebab; //Reef
 
   // typography
   --font-family-primary-extrabold: "Satoshi-extrabold", sans-serif;
@@ -29,8 +31,9 @@
   --font-family-primary-regular: "Satoshi-regular", sans-serif;
 }
 
-/* Fonts */
-
+/*=============================================>>>>>
+= Typography (fonts) =
+===============================================>>>>>*/
 /* Satoshi */
 /* https://www.fontshare.com/fonts/satoshi */
 
@@ -44,7 +47,9 @@
   src: url("./fonts/Satoshi.woff2") format("truetype");
 }
 
-////////
+/*=============================================>>>>>
+= Other =
+===============================================>>>>>*/
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -72,6 +77,14 @@ h1 {
   font-size: 3rem;
   line-height: 1.25;
   text-shadow: 0 0 1rem var(--color-glow);
+
+  @include media-down(tablet) {
+    font-size: 2.5rem;
+  }
+
+  @include media-down(mobile) {
+    font-size: 2.25rem;
+  }
 }
 
 h2 {
@@ -79,17 +92,12 @@ h2 {
   font-weight: 900;
   font-variation-settings: "wght" 900;
   color: var(--color-text-h2);
-  font-size: 2.25rem;
-  line-height: 1.33;
-}
+  font-size: 2rem;
+  line-height: 1.25;
 
-h3 {
-  font-family: Satoshi, sans-serif;
-  font-weight: 700;
-  font-variation-settings: "wght" 700;
-  color: var(--color-text-h3);
-  font-size: 1.5rem;
-  line-height: 1.45;
+  @include media-down(tablet) {
+    font-size: 1.75rem;
+  }
 }
 
 h3 {
@@ -98,7 +106,11 @@ h3 {
   font-variation-settings: "wght" 700;
   color: var(--color-text-h3);
   font-size: 1.625rem;
-  line-height: 1.45;
+  line-height: 1.33;
+
+  @include media-down(tablet) {
+    font-size: 1.5rem;
+  }
 }
 
 // assign h4
@@ -128,6 +140,10 @@ p {
   font-size: 1.125rem;
   line-height: 1.45;
   max-width: 54rem;
+
+  @include media-down(mobile) {
+    font-size: 1rem;
+  }
 
   b {
     font-weight: 900;
@@ -164,24 +180,59 @@ p {
   color: var(--color-text-caption);
   font-size: 1.375rem;
   line-height: 1.45;
+  margin: 0.5rem 0;
 }
 
 .section {
   min-height: 100vh;
   margin: 0 3rem;
   max-width: 72rem;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:not(:last-child) {
+    padding: 6rem 0;
+    box-sizing: border-box;
+  }
+
+  // last child includes Get Involved and Footer
+  &:last-child {
+    margin: 0;
+    padding: 4.5rem 0 0 0;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
 
   .glow-wrapper {
     box-shadow: 0 0 2rem var(--color-glow);
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 2.5rem;
 
     &.small {
       padding: 1rem;
     }
+  }
+
+  .roadmap-subsection {
+    margin: 2rem 0;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    h5 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .get-involved-subsection {
+    margin: 0 3rem;
   }
 }
 
@@ -189,25 +240,105 @@ p {
   display: flex;
   flex-direction: row;
 
+  @include media-down(tablet) {
+    flex-direction: column;
+  }
+
   &.two-third {
-    &:first-child {
-      width: 75%;
-    }
   }
 
   &.one-third {
-    div {
+    .glow-wrapper {
       width: 33.33%;
+      box-sizing: border-box;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      @include media-down(tablet) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
   &.half {
-    div {
+    .glow-wrapper {
+      padding: 3rem;
       width: 50%;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+// Hero
+
+.section.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .glow-wrapper {
+    max-width: 38rem;
+    min-width: 18rem;
+    margin-right: 2rem;
+
+    @include media-down(tablet) {
+      width: 100%;
+      margin-right: 0;
+      max-width: unset;
     }
   }
 
-  .glow-wrapper:not(:last-child) {
-    margin-right: 1rem;
+  .hero-visual-wrapper {
+    flex: 1;
+
+    @include media-down(tablet) {
+      display: none;
+    }
+  }
+}
+
+// Who
+
+.section.who {
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+  .glow-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 3rem;
+
+    svg {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Roadmap
+
+.roadmap-visual-wrapper {
+  svg {
+    width: 100%;
+  }
+
+  &.horizontal {
+    @include media-down(mobile) {
+      display: none;
+    }
+  }
+
+  &.vertical {
+    @include media-up(mobile) {
+      display: none;
+    }
   }
 }

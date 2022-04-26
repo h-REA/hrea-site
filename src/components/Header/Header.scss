@@ -1,9 +1,41 @@
 header {
-  padding: 2rem;
+  padding: 0.5rem 2rem 0.5rem 0.25rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   flex: 1 auto 1;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+
+  a.logo {
+    h1 {
+      margin: 0;
+      box-sizing: border-box;
+      font-size: unset;
+      height: 4rem;
+
+      svg {
+        height: 4rem;
+
+        filter feFlood {
+          flood-opacity: 0.3;
+          transition: 0.3s flood-opacity ease;
+        }
+
+        &:hover {
+          filter {
+            feFlood {
+              flood-opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
 
   nav {
     display: flex;
@@ -14,17 +46,16 @@ header {
       list-style: none;
 
       &:not(:last-child) {
-        margin-right: 1.75rem;
+        margin-right: 2.5rem;
       }
 
       a {
         text-decoration: none;
         font-family: Satoshi, sans-serif;
-        font-weight: 600;
-        font-variation-settings: "wght" 600;
+        font-weight: 700;
+        font-variation-settings: "wght" 700;
         color: var(--color-text-p);
-        font-size: 1.125rem;
-        line-height: 1.5;
+        font-size: 1rem;
         cursor: pointer;
         transition: 0.2s all ease;
         &:hover {

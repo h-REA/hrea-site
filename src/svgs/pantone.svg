@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.463" height="36.463" viewBox="0 0 36.463 36.463">
+  <defs>
+    <style>
+      .pantone-cls-1 {
+        opacity: 0.5;
+      }
+
+      .pantone-cls-2 {
+        fill: none;
+        stroke: #f8bc5c;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="pantone" class="pantone-cls-1" transform="translate(-1.5 -1.5)">
+    <path id="Path_29" data-name="Path 29" class="pantone-cls-2" d="M3,29.027a7.436,7.436,0,1,0,14.873,0V3H3Z"/>
+    <path id="Path_30" data-name="Path 30" class="pantone-cls-2" d="M10.825,29.923,20.446,20.3,26.952,13.8l-9.3-9.3L11.15,11.007" transform="translate(6.722 1.289)"/>
+    <path id="Path_31" data-name="Path 31" class="pantone-cls-2" d="M7,27.873H33.027V13h-9.3" transform="translate(3.436 8.591)"/>
+    <path id="Path_32" data-name="Path 32" class="pantone-cls-2" d="M7,17h.019" transform="translate(3.436 12.027)"/>
+  </g>
+</svg>

@@ -1,7 +1,9 @@
 import React from "react";
 import "./Header.scss";
 
-// import scrollToSection from "./scroll-help"
+import HreaLogo from "../../svgs/hrea-logo.svg";
+
+import { scrollToSection, scrollToHome } from "../Scroll";
 
 export type HeaderProps = {};
 
@@ -18,9 +20,10 @@ const NavLinks = () => {
     <nav>
       {items.map((item, index) => (
         <li key={index}>
-          {/*  <a href={item[0]} onClick={scrollToSection}>
-              {item[1]} */}
-          <a href={item[0]}>{item[1]}</a>
+          <a href={item[0]} onClick={scrollToSection}>
+            {item[1]}
+          </a>
+          {/* <a href={item[0]}>{item[1]}</a> */}
         </li>
       ))}
     </nav>
@@ -30,7 +33,11 @@ const NavLinks = () => {
 const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <header>
-      <div>Logo</div>
+      <a title="hREA Logo" className="logo" onClick={scrollToHome}>
+        <h1>
+          <HreaLogo />
+        </h1>
+      </a>
       <NavLinks />
       {/* Social Links */}
       <div className="social-links-wrapper">
