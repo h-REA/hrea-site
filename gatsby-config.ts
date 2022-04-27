@@ -8,14 +8,17 @@ const config: GatsbyConfig = {
     description: `hREA (Holochain Resource-Event-Agent) enables a transparent and trusted account of events in the value chain across and within ecosystems.`
   },
   plugins: 
-  ["gatsby-plugin-react-helmet", "gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  ["gatsby-plugin-react-helmet", "gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-react-helmet", 
+  "gatsby-plugin-sharp"
+  , "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": "./src/images/",
     },
     __key: "images"
   },
+  // react svg plugin
   {
     resolve: 'gatsby-plugin-react-svg',
     options: {
@@ -23,7 +26,20 @@ const config: GatsbyConfig = {
         include: /svgs/
       }
     }
-  }
+  },
+// manifest plugin
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `hREA`,
+      short_name: `hrea`,
+      start_url: `/`,
+      background_color: `#27363b`,
+      theme_color: `#27363b`,
+      display: `minimal-ui`,
+      icon: `src/images/hrea-icon.png`, // This path is relative to the root of the site.
+  },
+},
 
 ]
 };

@@ -376,11 +376,7 @@ p {
   }
 
   .hero-visual-wrapper {
-    width: 100%;
-
-    @include media-up(desktop) {
-      width: 17.5rem;
-    }
+    width: 17.5rem;
 
     @include media-down(tablet) {
       display: none;
