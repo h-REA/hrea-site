@@ -2,9 +2,16 @@ import * as React from "react";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import HeroVisual from "../components/HeroVisual/HeroVisual";
+import Button from "../components/Button/Button";
+
+import { scrollToSection } from "../components/Scroll";
+
 import "../global.scss";
 
 import SEO from "../components/seo";
+
+// Mobile menu images
+import MenuBookIcon from "../svgs/book.svg";
 
 // How section images
 import BoxIcon from "../svgs/box.svg";
@@ -18,13 +25,26 @@ import GiftIcon from "../svgs/gift.svg";
 // Roadmap section images
 import RoadmapVisHorizontal from "../svgs/roadmap-vis-horizontal.svg";
 import RoadmapVisVertical from "../svgs/roadmap-vis-vertical.svg";
+import FundingGoalProgressVis from "../svgs/funding-goal-progress-vis.svg";
+import FundingGoalProgressVisSmall from "../svgs/funding-goal-progress-vis-small.svg";
+import { useState } from "react";
+import MenuMobile from "../components/MenuMobile/MenuMobile";
 
 // markup
 const IndexPage = () => {
+  const [openMenuMobile, setOpenMenuMobile] = useState(false);
   return (
     <>
       <SEO title="Scalable & distributed framework for economic network coordination" />
       <Header />
+      {/* Mobile menu is only visible on smaller screens */}
+      <MenuMobile
+        isOpen={openMenuMobile}
+        closeMenu={() => setOpenMenuMobile(false)}
+      />
+      <div className="menu-mobile-icon" onClick={() => setOpenMenuMobile(true)}>
+        <MenuBookIcon />
+      </div>
       <main>
         {/* Landing page hero */}
         <div className="section hero" id="hero">
@@ -36,18 +56,46 @@ const IndexPage = () => {
             </h1>
 
             <p>
-              <b>hREA</b> (<a className="link secondary">Holochain </a>{" "}
-              <a className="link primary">Resource-Event-Agent</a>) enables a
-              transparent and trusted account of events in the value chain
-              across and within ecosystems, supporting efficient allocation of
-              resources and conflict resolutions.
+              <b>hREA</b> (
+              <a
+                className="link secondary"
+                href="https://www.holochain.org/"
+                target="_blank"
+              >
+                Holochain{" "}
+              </a>{" "}
+              <a
+                className="link primary"
+                href="https://en.wikipedia.org/wiki/Resources%2C_Events%2C_Agents"
+                target="_blank"
+              >
+                Resource-Event-Agent
+              </a>
+              ) enables a transparent and trusted account of events in the value
+              chain across and within ecosystems, supporting efficient
+              allocation of resources and conflict resolutions.
             </p>
+
+            <div className="buttons-row">
+              <Button
+                text="Learn more"
+                onClick={scrollToSection}
+                href="/#how-it-works"
+              />
+              <a href="https://opencollective.com/hrea" target="_blank">
+                <Button
+                  text="Become a sponsor"
+                  semiTransparent
+                  externalLinkIcon
+                />
+              </a>
+            </div>
           </div>
           <HeroVisual />
         </div>
 
         {/* How it works  */}
-        <div className="section" id="how-it-works">
+        <div className="section how" id="how-it-works">
           <h3 className="caption">How it works</h3>
           <h2>
             Superpowered coordination <br />
@@ -102,17 +150,18 @@ const IndexPage = () => {
               <BuildingIcon />
               <p>
                 Organizations and businesses with{" "}
-                <b>cross-stakeholder value chains</b> (think supply chains,
-                joint ventures, multi-company collaboration spaces, or economic
-                networks)
+                <b>cross-stakeholder value chains</b> <b />
+                (think supply chains, joint ventures, multi-company
+                collaboration spaces, or economic networks)
               </p>
             </div>
             <div className="glow-wrapper">
               <GiftIcon />
               <p>
                 The parties involved in{" "}
-                <b>loosely coupled economic coordination</b> (think open source
-                projects, artistic collectives, eco villages, DAOs, and more)
+                <b>loosely coupled economic coordination</b> <b />
+                (think open source projects, artistic collectives, eco villages,
+                DAOs, and more)
               </p>
             </div>
           </div>
@@ -128,8 +177,16 @@ const IndexPage = () => {
             <p>
               <ol>
                 <li>
-                  Led by <a className="link primary">pospi</a> , hREA project
-                  started and was continued through ad hoc development.
+                  Led by{" "}
+                  <a
+                    className="link primary"
+                    href="https://pospi.spadgos.com"
+                    target="_blanks"
+                  >
+                    pospi
+                  </a>
+                  , hREA project started and was continued through ad hoc
+                  development.
                 </li>
                 <li>
                   Around 70% towards the goal of usability of the API for
@@ -146,8 +203,15 @@ const IndexPage = () => {
             <p>
               <ol>
                 <li>
-                  Led by <a className="link primary">Sprillow</a>, our goal is
-                  to reach a 100% usable API (v1.0) for hREA.
+                  Led by{" "}
+                  <a
+                    className="link primary"
+                    href="https://sprillow.com"
+                    target="_blank"
+                  >
+                    Sprillow
+                  </a>
+                  , our goal is to reach a 100% usable API (v1.0) for hREA.
                 </li>
                 <li>Basic UI for data visualization of the ledger</li>
               </ol>
@@ -178,7 +242,7 @@ const IndexPage = () => {
         </div>
 
         {/* Fund / become a sponsor */}
-        <div className="section" id="fund">
+        <div className="section fund" id="fund">
           <h3 className="caption">Become a sponsor</h3>
           <h2>
             Help us reach the <br />
@@ -187,9 +251,16 @@ const IndexPage = () => {
           </h2>
 
           <p>
-            Visit <a className="link primary">hREA’s Open Collective page</a>{" "}
+            Visit{" "}
+            <a
+              className="link primary"
+              href="https://opencollective.com/hrea"
+              target="_blank"
+            >
+              hREA’s Open Collective page
+            </a>{" "}
             for making a contribution and to get updates on the progress of the
-            project. If you have any questions, email{" "}
+            project. If you have any questions, send an email to{" "}
             <a
               className="link primary"
               href="linkto:connor@sprillow.com?bcc=pegah@sprillow.com"
@@ -198,32 +269,48 @@ const IndexPage = () => {
             </a>
             .
           </p>
-          {/* Button here */}
-          <h3>Current MMR funding goal progress</h3>
-          <h5>May 2022 - August 2022</h5>
-          {/* funding goal meter visual here */}
+          <div className="buttons-row">
+            <a href="https://opencollective.com/hrea" target="_blank">
+              <Button text="Become a sponsor" externalLinkIcon/>
+            </a>
+          </div>
+
+          <div className="mmr-progress">
+            <h3>Current MMR funding goal progress</h3>
+            <h5>May 2022 - August 2022</h5>
+            {/* funding goal progress visual */}
+            <div className="funding-visual-wrapper large">
+              <FundingGoalProgressVis />
+            </div>
+            <div className="funding-visual-wrapper small">
+              <FundingGoalProgressVisSmall />
+            </div>
+          </div>
         </div>
 
         {/* Get involved */}
-        <div className="section" id="get-involved">
-          <div className="get-involved-subsection">
-            <h3 className="caption">Get Involved</h3>
-            <h2>
-              Join the hREA’s <br />
-              comminuty of practice
-            </h2>
+        <div className="section get-involved" id="get-involved">
+          <h3 className="caption">Get Involved</h3>
+          <h2>
+            Join the hREA’s <br />
+            comminuty of practice
+          </h2>
 
-            <p>
-              Does hREA sounds like something you need or want to work with?{" "}
-              <a className="link primary" href="" target="_blank">
-                Join the hREA discord
-              </a>
-              .
-            </p>
-          </div>
-          <Footer />
+          <p>
+            Does hREA sounds like something you need or want to work with?{" "}
+            {/* TODO: add Discord link */}
+            <a
+              className="link primary"
+              href="https://discord.com/"
+              target="_blank"
+            >
+              Join the hREA discord
+            </a>
+            .
+          </p>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

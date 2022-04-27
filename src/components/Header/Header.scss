@@ -1,3 +1,5 @@
+@import "../../mixin";
+
 header {
   padding: 0.5rem 2rem 0.5rem 0.25rem;
   display: flex;
@@ -10,6 +12,10 @@ header {
   z-index: 2;
   width: 100%;
   box-sizing: border-box;
+
+  @include media-down(tablet) {
+    padding: 0;
+  }
 
   a.logo {
     h1 {
@@ -42,6 +48,10 @@ header {
     flex-direction: row;
     align-items: space-around;
 
+    @include media-down(tablet) {
+      display: none;
+    }
+
     li {
       list-style: none;
 
@@ -63,6 +73,12 @@ header {
           text-decoration: underline;
         }
       }
+    }
+  }
+
+  .social-links-wrapper {
+    @include media-down(tablet) {
+      display: none;
     }
   }
 }

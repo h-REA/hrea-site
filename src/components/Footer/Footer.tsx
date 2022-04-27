@@ -13,12 +13,14 @@ const Footer: React.FC<FooterProps> = ({}) => {
     <footer>
       <div className="footer-row first">
         {/* Add sponsor logos with link here*/}
-        <h3>Project Oak Sponsor</h3>
-        <img
-          className="sponsor-logo"
-          src={SponsorLogoHolo}
-          alt="Sponsor Logo Holo Limited"
-        />
+        <h3>Project 🌳 Oak Sponsor</h3>
+        <a href="https://holo.host" target="_blank">
+          <img
+            className="contributor-logo"
+            src={SponsorLogoHolo}
+            alt="Sponsor Logo Holo Limited"
+          />
+        </a>
       </div>
 
       <div className="footer-row second">
@@ -32,9 +34,28 @@ const Footer: React.FC<FooterProps> = ({}) => {
 
         {/* Social Links */}
         <div className="social-links-wrapper">
-          <a className="social-link">Email</a>
-          <a className="social-link">Discord</a>
-          <a className="social-link">GitHub</a>
+          <a
+            className="social-link"
+            href="linkto:connor@sprillow.com?bcc=pegah@sprillow.com"
+            target="_blank"
+          >
+            Email
+          </a>
+          {/* TODO: add discord link */}
+          <a
+            className="social-link"
+            href="https://discord.com/"
+            target="_blank"
+          >
+            Discord
+          </a>
+          <a
+            className="social-link"
+            href="https://github.com/h-rea"
+            target="_blank"
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </footer>

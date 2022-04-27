@@ -5,7 +5,8 @@
 
   // color
   --color-bg: #27363b; //Outer Space
-  --color-glow: #ebebeb30; //Gallery (10% opacity)
+  --color-glow: #ebebeb30; //Gallery (20% opacity)
+  --color-glow-hover: #ebebeb5a; //Gallery (40% opacity)
 
   --color-text-h1: #f2e9e9; //Soft Peach
   --color-text-h2: #d8eacc; //Zanah
@@ -20,7 +21,7 @@
   --color-text-link-secondary: #93deca; //Algae Green
 
   --color-button-primary: #00ada5; //Persian Green
-  --color-button-primary: #f4ede72c; //Dawn Pink (20% opacity)
+  --color-button-secondary: #f4ede72c; //Dawn Pink (20% opacity)
 
   --color-reef: #c4ebab; //Reef
 
@@ -63,6 +64,12 @@ body {
 
 main {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  @include media-up(desktop) {
+    align-items: center;
+  }
 }
 
 a {
@@ -105,11 +112,11 @@ h3 {
   font-weight: 700;
   font-variation-settings: "wght" 700;
   color: var(--color-text-h3);
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   line-height: 1.33;
 
   @include media-down(tablet) {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 }
 
@@ -130,6 +137,10 @@ h5 {
   color: var(--color-text-h5);
   font-size: 1.25rem;
   line-height: 1.45;
+
+  @include media-down(mobile) {
+    font-size: 1.125rem;
+  }
 }
 
 p {
@@ -159,9 +170,24 @@ p {
     }
   }
 
+  ol {
+    padding-left: 1.875rem;
+
+    li {
+      list-style-type: "🌱  ";
+      margin-bottom: 0.5rem;
+    }
+  }
+
   .link {
     font-weight: 900;
     font-variation-settings: "wght" 900;
+    text-decoration: none;
+    transition: 0.2s text-decoration ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &.primary {
       color: var(--color-text-link-primary);
@@ -186,25 +212,20 @@ p {
 .section {
   min-height: 100vh;
   margin: 0 3rem;
-  max-width: 72rem;
+  max-width: 68rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding: 6rem 0;
+  box-sizing: border-box;
 
-  &:not(:last-child) {
-    padding: 6rem 0;
-    box-sizing: border-box;
+  @include media-up(desktop) {
+    width: 68rem;
+    margin: 0 6rem;
+    justify-content: center;
   }
 
-  // last child includes Get Involved and Footer
-  &:last-child {
-    margin: 0;
-    padding: 4.5rem 0 0 0;
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+  h2 {
+    margin-top: 1rem;
   }
 
   .glow-wrapper {
@@ -217,20 +238,6 @@ p {
     }
   }
 
-  .roadmap-subsection {
-    margin: 2rem 0;
-
-    h2 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-
-    h5 {
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-    }
-  }
-
   .get-involved-subsection {
     margin: 0 3rem;
   }
@@ -240,14 +247,13 @@ p {
   display: flex;
   flex-direction: row;
 
-  @include media-down(tablet) {
-    flex-direction: column;
-  }
-
   &.two-third {
   }
 
   &.one-third {
+    @include media-down(tablet) {
+      flex-direction: column;
+    }
     .glow-wrapper {
       width: 33.33%;
       box-sizing: border-box;
@@ -265,12 +271,24 @@ p {
   }
 
   &.half {
+    @include media-down(mobile) {
+      flex-direction: column;
+    }
     .glow-wrapper {
-      padding: 3rem;
       width: 50%;
+      box-sizing: border-box;
+
+      @include media-down(mobile) {
+        width: 100%;
+      }
 
       &:not(:last-child) {
         margin-right: 2rem;
+      }
+
+      @include media-down(mobile) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
       }
     }
   }
@@ -282,11 +300,19 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-sizing: border-box;
+  align-items: flex-start;
 
   .glow-wrapper {
-    max-width: 38rem;
-    min-width: 18rem;
-    margin-right: 2rem;
+    max-width: 40rem;
+    min-width: 28rem;
+    margin-right: 1.5rem;
+
+    @include media-up(desktop) {
+      flex: 1;
+      min-width: 36rem;
+      margin-right: 2rem;
+    }
 
     @include media-down(tablet) {
       width: 100%;
@@ -296,7 +322,11 @@ p {
   }
 
   .hero-visual-wrapper {
-    flex: 1;
+    width: 100%;
+
+    @include media-up(desktop) {
+      width: 17.5rem;
+    }
 
     @include media-down(tablet) {
       display: none;
@@ -304,18 +334,30 @@ p {
   }
 }
 
+// How
+
+.section.how {
+  h2 {
+    margin-bottom: 2.5rem;
+  }
+}
+
 // Who
 
 .section.who {
-
   h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
+
   .glow-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.5rem 3rem;
+    padding: 4rem 3rem;
+
+    p {
+      max-width: 24rem;
+    }
 
     svg {
       margin-bottom: 1rem;
@@ -325,20 +367,139 @@ p {
 
 // Roadmap
 
-.roadmap-visual-wrapper {
-  svg {
-    width: 100%;
+.roadmap-subsection {
+  margin: 1.5rem 0;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
+  h5 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.roadmap-visual-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  // svg {
+  //   width: 100%;
+  // }
+
   &.horizontal {
+    justify-content: left;
+
     @include media-down(mobile) {
       display: none;
     }
   }
 
   &.vertical {
+    justify-content: center;
+
     @include media-up(mobile) {
       display: none;
     }
+  }
+}
+
+// Fund
+
+.section.fund {
+  .buttons-row {
+    margin-top: 1.5rem;
+  }
+
+  h2 {
+    @include media-down(tablet) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .mmr-progress {
+    width: 100%;
+
+    h3 {
+      margin-bottom: 0.625rem;
+    }
+
+    h5 {
+      margin-top: 0;
+    }
+
+    .funding-visual-wrapper {
+      svg {
+        @include media-down(tablet) {
+          width: 100%;
+        }
+      }
+      &.large {
+        margin: 2.5rem 0;
+        justify-content: left;
+
+        @include media-down(mobile) {
+          display: none;
+        }
+      }
+
+      &.small {
+        margin: 2rem 0;
+        @include media-up(mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Get involved
+
+.section.get-involved {
+  min-height: 60vh;
+  padding-bottom: 2rem;
+
+  @include media-up(desktop) {
+    width: 68rem;
+  }
+}
+
+// buttons
+
+.buttons-row {
+  display: flex;
+  flex-direction: row;
+  margin: 2.5rem 0 2rem 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// mobile menu
+
+.menu-mobile-icon {
+  z-index: 2;
+  display: none;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 2;
+  cursor: pointer;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include media-down(tablet) {
+    display: block;
   }
 }

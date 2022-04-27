@@ -3,10 +3,9 @@
 footer {
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 2rem);
   box-sizing: border-box;
-  padding: 1rem;
-  margin-top: 6rem;
+  padding: 2rem;
+  margin-top: 2rem;
 
   @include media-down(tablet) {
     padding: 1rem;
@@ -29,8 +28,13 @@ footer {
         align-items: center;
       }
 
-      .sponsor-logo {
+      .contributor-logo {
         width: 18rem;
+        transition: 0.2s opacity ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
 
         @include media-down(mobile) {
           width: 10rem;
@@ -83,6 +87,11 @@ footer {
       font-variation-settings: "wght" 500;
       color: var(--color-reef);
       font-size: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
 
       &:not(:last-child) {
         margin-right: 2rem;
