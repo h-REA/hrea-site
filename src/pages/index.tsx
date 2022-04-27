@@ -49,6 +49,12 @@ const IndexPage = () => {
         {/* Landing page hero */}
         <div className="section hero" id="hero">
           <div className="glow-wrapper">
+            {/* Tags */}
+            <div className="tags">
+              <div className="tag-wrapper">open source</div>
+              <div className="tag-wrapper">distributed technology</div>
+              <div className="tag-wrapper">Valueflows protocol</div>
+            </div>
             <h1>
               Scalable & distributed <br />
               framework for economic <br />
@@ -271,7 +277,7 @@ const IndexPage = () => {
           </p>
           <div className="buttons-row">
             <a href="https://opencollective.com/hrea" target="_blank">
-              <Button text="Become a sponsor" externalLinkIcon/>
+              <Button text="Become a sponsor" externalLinkIcon />
             </a>
           </div>
 

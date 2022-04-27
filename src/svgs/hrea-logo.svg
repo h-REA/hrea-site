@@ -11,8 +11,8 @@
 
       .logo-cls-2 {
         font-family: Satoshi, sans-serif;
-        font-weight: 700;
-        font-variation-settings: "wght" 700;
+        font-weight: 600;
+        font-variation-settings: "wght" 600;
       }
 
       .logo-cls-3 {
@@ -52,10 +52,10 @@
       }
 
       .logo-cls-11 {
-        filter: url(#hREA);
+        filter: url(#hREA-logo);
       }
     </style>
-    <filter id="hREA" x="32.128" y="0" width="128" height="86" filterUnits="userSpaceOnUse">
+    <filter id="hREA-logo" x="32.128" y="0" width="128" height="86" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="8" result="blur"/>
       <feFlood flood-color="#f4ede7" flood-opacity="0.4"/>
@@ -114,7 +114,7 @@
   </defs>
   <g id="hrea-logo" transform="translate(-21.872 -1)">
     <g class="logo-cls-11" transform="matrix(1, 0, 0, 1, 21.87, 1)">
-      <text id="hREA-2" data-name="hREA" class="logo-cls-1" transform="translate(56.13 55)"><tspan x="0" y="0">h</tspan><tspan class="logo-cls-2" y="0">REA</tspan></text>
+      <text id="hREA-logo-2" data-name="hREA-logo" class="logo-cls-1" transform="translate(56.13 55)"><tspan x="0" y="0">h</tspan><tspan class="logo-cls-2" y="0">REA</tspan></text>
     </g>
     <g id="logo-visual" transform="translate(35 28)">
       <g class="logo-cls-10" transform="matrix(1, 0, 0, 1, -13.13, -27)">

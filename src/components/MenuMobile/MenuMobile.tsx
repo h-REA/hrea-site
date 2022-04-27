@@ -4,7 +4,7 @@ import { scrollToSection } from "../Scroll";
 
 import "./MenuMobile.scss";
 
-import HreaLogo from "../../svgs/hrea-logo.svg";
+import HreaLogoMobile from "../../svgs/hrea-logo-mobile.svg";
 import BookIcon from "../../svgs/book-open-menu.svg";
 
 export type MenuMobileProps = {
@@ -40,20 +40,13 @@ const MenuMobile: React.FC<MenuMobileProps> = ({ isOpen, closeMenu }) => {
             <div className="menu-mobile-close-button" onClick={closeMenu}>
               <BookIcon className="close-icon" />
             </div>
-            {/* <a
-              className="menu-mobile-logo"
-              href="/#hero"
-              onClick={scrollToHome}
-            >
-              <HreaLogo />
-            </a> */}
             <a
               title="hREA Logo"
               className="menu-mobile-logo"
               onClick={scrollToHome}
             >
               <h1>
-                <HreaLogo />
+                <HreaLogoMobile />
               </h1>
             </a>
 

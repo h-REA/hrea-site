@@ -6,7 +6,12 @@
   box-sizing: border-box;
 
   .menu-mobile-logo {
-    scale: 1.5;
+    scale: 1.25;
+    transition: 0.2s opacity ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .menu-mobile-nav-socials {
@@ -15,6 +20,8 @@
     flex-direction: row;
     align-items: flex-start;
     .menu-mobile-nav {
+      margin-bottom: 7rem;
+
       li {
         list-style: none;
 
