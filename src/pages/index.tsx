@@ -293,11 +293,11 @@ const IndexPage = () => {
           <h3 className="caption">Get Involved</h3>
           <h2>
             Join the hREA’s <br />
-            comminuty of practice
+            community of practice
           </h2>
 
           <p>
-            Does hREA sounds like something you need or want to work with?{" "}
+            Does hREA sound like something you need or want to work with?{" "}
             {/* TODO: add Discord link */}
             <a
               className="link primary"
