@@ -11,7 +11,7 @@ const scrollToSection = (event: {
     if (event.target.href) {
       url = new URL(event.target.href);
     } else {
-      url = new URL(window.location.host + event.target.dataset.href)
+      url = new URL(window.location.protocol + '//' + window.location.host + event.target.dataset.href)
     }
     const id = url.hash;
     const element = document.querySelector(id);
