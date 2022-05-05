@@ -41,10 +41,9 @@ const Footer: React.FC<FooterProps> = ({}) => {
           >
             Email
           </a>
-          {/* TODO: add discord link */}
           <a
             className="social-link"
-            href="https://discord.com/"
+            href="https://discord.gg/um4UsxdFDk"
             target="_blank"
           >
             Discord
