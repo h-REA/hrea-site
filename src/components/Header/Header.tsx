@@ -41,8 +41,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
       <NavLinks />
       {/* Social Links */}
       <div className="social-links-wrapper">
-        {/* TODO: add Discord links */}
-        <a className="social-link" href="https://discord.com/" target="_blank">
+        <a className="social-link" href="https://discord.gg/um4UsxdFDk" target="_blank">
           Discord
         </a>
         <a
