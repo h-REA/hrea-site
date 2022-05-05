@@ -304,10 +304,9 @@ const IndexPage = () => {
 
           <p>
             Does hREA sound like something you need or want to work with?{" "}
-            {/* TODO: add Discord link */}
             <a
               className="link primary"
-              href="https://discord.com/"
+              href="https://discord.gg/um4UsxdFDk"
               target="_blank"
             >
               Join the hREA discord
