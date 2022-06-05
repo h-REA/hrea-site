@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: `hREA`,
     author: `Sprillow Limited`,
     siteUrl: `https://www.hrea.io`,
-    description: `hREA (Holochain Resource-Event-Agent) enables a transparent and trusted account of events in the value chain across and within ecosystems.`
+    description: `hREA (Holochain Resource-Event-Agent) enables a transparent and trusted account of events in value flows across and within ecosystems.`
   },
   plugins: 
   ["gatsby-plugin-react-helmet", "gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-react-helmet", 
@@ -37,7 +37,7 @@ const config: GatsbyConfig = {
       background_color: `#27363b`,
       theme_color: `#27363b`,
       display: `minimal-ui`,
-      icon: `src/images/hrea-icon.png`, // This path is relative to the root of the site.
+      icon: `src/images/hrea-logo.png`, // This path is relative to the root of the site.
   },
 },
 

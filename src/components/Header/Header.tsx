@@ -4,6 +4,7 @@ import "./Header.scss";
 import HreaLogo from "../../svgs/hrea-logo.svg";
 
 import { scrollToSection, scrollToHome } from "../Scroll";
+import LogoDynamic from "../LogoDynamic/LogoDynamic";
 
 export type HeaderProps = {};
 
@@ -35,13 +36,21 @@ const Header: React.FC<HeaderProps> = ({}) => {
     <header>
       <a title="hREA Logo" className="logo" onClick={scrollToHome}>
         <h1>
-          <HreaLogo />
+          <div className="hrea-logo-wrapper">
+            <LogoDynamic />
+            
+          </div>
+          {/* <HreaLogo /> */}
         </h1>
       </a>
       <NavLinks />
       {/* Social Links */}
       <div className="social-links-wrapper">
-        <a className="social-link" href="https://discord.gg/um4UsxdFDk" target="_blank">
+        <a
+          className="social-link"
+          href="https://discord.gg/um4UsxdFDk"
+          target="_blank"
+        >
           Discord
         </a>
         <a

@@ -10,7 +10,7 @@
         stroke-linecap: round;
         stroke-width: 5px;
         stroke-dasharray: 10 10;
-        opacity: 0.452;
+        opacity: 0.552;
       }
 
       .circle-2-cls-2 {

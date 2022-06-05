@@ -53,7 +53,7 @@ const IndexPage = () => {
             <div className="tags">
               <div className="tag-wrapper">open source</div>
               <div className="tag-wrapper">distributed technology</div>
-              <div className="tag-wrapper">Valueflows protocol</div>
+              <div className="tag-wrapper">Valueflows specification</div>
             </div>
             <h1>
               Scalable & distributed <br />
@@ -77,9 +77,17 @@ const IndexPage = () => {
               >
                 Resource-Event-Agent
               </a>
-              ) enables a transparent and trusted account of events in the value
-              chain across and within ecosystems, supporting efficient
-              allocation of resources and conflict resolutions.
+              ) is an implementation of the{" "}
+              <a
+                className="link primary"
+                href="http://valueflo.ws/"
+                target="_blank"
+              >
+                Valueflows
+              </a>{" "}
+              specification. It enables a transparent and trusted account of events
+              in value flows across and within ecosystems, supporting efficient
+              allocation of resources and resolving disputes.
             </p>
 
             <div className="buttons-row">
@@ -131,7 +139,7 @@ const IndexPage = () => {
             </div>
             <div className="glow-wrapper">
               <PantoneIcon />
-              <h3>Bring-your-own-user-interface with Valueflows hREA API</h3>
+              <h3>Bring-your-own-user-interface with hREA API</h3>
               <p>
                 Get an entire backend system out-of-the-box, and rely on
                 excellent API documentation for developers on your team to build
@@ -147,7 +155,7 @@ const IndexPage = () => {
           <h3 className="caption">Who is hREA for</h3>
           <h2>
             hREA enables tracking & tracing <br />
-            value chain flows for conventional <br />
+            value flows for conventional <br />
             and alternative economies alike
           </h2>
 

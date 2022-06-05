@@ -6,7 +6,7 @@
       }
 
       .circle-3-cls-1 {
-        stroke: #c7ffa3;
+        stroke: #ef8f75;
         stroke-linecap: round;
         stroke-width: 5px;
         stroke-dasharray: 10 10;

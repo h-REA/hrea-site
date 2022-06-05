@@ -6,6 +6,7 @@ import "./MenuMobile.scss";
 
 import HreaLogoMobile from "../../svgs/hrea-logo-mobile.svg";
 import BookIcon from "../../svgs/book-open-menu.svg";
+import LogoDynamic from "../LogoDynamic/LogoDynamic";
 
 export type MenuMobileProps = {
   isOpen: boolean;
@@ -46,7 +47,8 @@ const MenuMobile: React.FC<MenuMobileProps> = ({ isOpen, closeMenu }) => {
               onClick={scrollToHome}
             >
               <h1>
-                <HreaLogoMobile />
+                {/* <HreaLogoMobile /> */}
+                <LogoDynamic />
               </h1>
             </a>
 

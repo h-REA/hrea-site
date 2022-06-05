@@ -21,14 +21,12 @@ header {
 
   a.logo {
     h1 {
-      margin: 0;
-      box-sizing: border-box;
-      font-size: unset;
-      height: 4.25rem;
+      margin: 0 0.25rem;
+      @include media-down(tablet) {
+        margin: 0.5rem;
+      }
 
       svg {
-        height: 4.25rem;
-
         filter feFlood {
           flood-opacity: 0.3;
           transition: 0.3s flood-opacity ease;

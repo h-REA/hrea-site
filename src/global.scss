@@ -5,6 +5,7 @@
 
   // color
   --color-bg: #27363b; //Outer Space
+  --color-bg-semi-transparent: #27363b7b; //Outer Space (50% opacity)
   --color-glow: #ebebeb30; //Gallery (20% opacity)
   --color-glow-hover: #ebebeb5a; //Gallery (40% opacity)
   --color-tag-bg: #c4d5b935;
@@ -17,15 +18,16 @@
   --color-text-p: #ede4db; //Pearl Bush
   --color-text-caption: #d8d8d8; //Alto
   --color-text-glow: #ebebeb3e; //Gallery (20% opacity)
+  --color-text-glow-50: #ebebeb70; //Gallery (50% opacity)
   --color-text-tag: #eae7d2;
 
-  --color-text-link-primary: #bb95f5; //Bright Lavender
-  --color-text-link-secondary: #93deca; //Algae Green
+  --color-text-link-primary: #e6a1e5;//Medium Lavender Magenta
+  --color-text-link-secondary: #f8cd7b; //Granny Smith Apple 
 
   --color-button-primary: #00918a; //Persian Green
   --color-button-secondary: #f4ede72c; //Dawn Pink (20% opacity)
 
-  --color-reef: #c4ebab; //Reef
+  --color-social-links: #d4bff7; //Bright lavendar
 
   // typography
   --font-family-primary-extrabold: "Satoshi-extrabold", sans-serif;
@@ -63,6 +65,7 @@
 body {
   margin: 0;
   background-color: var(--color-bg);
+  overflow-x: hidden;
 }
 
 main {
@@ -183,8 +186,8 @@ p {
   }
 
   .link {
-    font-weight: 900;
-    font-variation-settings: "wght" 900;
+    font-weight: 700;
+    font-variation-settings: "wght" 700;
     text-decoration: none;
     transition: 0.2s text-decoration ease;
 
@@ -241,6 +244,8 @@ p {
     box-shadow: 0 0 2rem var(--color-glow);
     border-radius: 1rem;
     padding: 2rem 2.5rem;
+    background-color: var(--color-bg-semi-transparent);
+
     @include media-down(mobile) {
       padding: 1.5rem;
     }
@@ -311,8 +316,8 @@ p {
 .section.hero {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   box-sizing: border-box;
+  justify-content: left;
   align-items: flex-start;
 
   .glow-wrapper {
@@ -361,6 +366,12 @@ p {
       max-width: unset;
       min-width: unset;
 
+      p {
+        max-width: 33rem;
+      }
+    }
+
+    @include media-down(mobile) {
       .buttons-row {
         flex-direction: column;
 
@@ -372,14 +383,6 @@ p {
           }
         }
       }
-    }
-  }
-
-  .hero-visual-wrapper {
-    width: 17.5rem;
-
-    @include media-down(tablet) {
-      display: none;
     }
   }
 }
@@ -547,6 +550,7 @@ p {
   top: 1rem;
   z-index: 2;
   cursor: pointer;
+  padding: 0.5rem;
 
   svg {
     width: 1.5rem;
