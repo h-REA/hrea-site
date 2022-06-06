@@ -277,9 +277,9 @@ const IndexPage = () => {
             project. If you have any questions, send an email to{" "}
             <a
               className="link primary"
-              href="linkto:connor@sprillow.com?bcc=pegah@sprillow.com"
+              href="mailto:hello@hrea.io"
             >
-              connor@sprillow.com
+              hello@hrea.io
             </a>
             .
           </p>
