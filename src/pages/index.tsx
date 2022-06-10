@@ -129,7 +129,7 @@ const IndexPage = () => {
             <div className="glow-wrapper">
               <BookIcon />
               <h3>
-                Collaborative economic coordination on Distributed Ledger
+                Economic coordination on Distributed Ledger
                 Technology
               </h3>
               <p>
