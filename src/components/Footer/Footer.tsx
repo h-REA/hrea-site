@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
         <div className="social-links-wrapper">
           <a
             className="social-link"
-            href="linkto:connor@sprillow.com?bcc=pegah@sprillow.com"
+            href="mailto:hello@hrea.io"
             target="_blank"
           >
             Email
