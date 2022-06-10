@@ -57,6 +57,21 @@ const Footer: React.FC<FooterProps> = ({}) => {
           </a>
         </div>
       </div>
+
+      <div className="footer-row third">
+        <p>
+          Landing page visual identity & build by{" "}
+          <a href="https://sprillow.com" target="_blank">
+            Sprillow
+          </a>
+          .
+          Logo by{" "}
+          <a href="https://frugal.systems" target="_blank">
+            Pablo Somonte Ruano
+          </a>
+          .
+        </p>
+      </div>
     </footer>
   );
 };

@@ -54,6 +54,14 @@ footer {
         align-items: center;
       }
     }
+
+    &.third {
+      margin-top: 1rem;
+      p {
+        font-size: 0.8rem;
+        opacity: 0.75;
+      }
+    } 
   }
 
   p {

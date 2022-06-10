@@ -85,9 +85,9 @@ const IndexPage = () => {
               >
                 Valueflows
               </a>{" "}
-              specification. It enables a transparent and trusted account of events
-              in value flows across and within ecosystems, supporting efficient
-              allocation of resources and resolving disputes.
+              specification. It enables a transparent and trusted account of
+              resource and information flows between decentralized and
+              independent agents, across and within ecosystems.
             </p>
 
             <div className="buttons-row">
@@ -114,37 +114,40 @@ const IndexPage = () => {
           <h2>
             Superpowered coordination <br />
             through integration of <br />
-            Holochain and REA protocols
+            Holochain and REA grammars
           </h2>
 
           <div className="columns-wrapper one-third">
             <div className="glow-wrapper">
               <BoxIcon />
-              <h3>Low-tech-overhead modular economic blocks</h3>
+              <h3>Simple, composable, and modular economic building blocks</h3>
               <p>
-                Mix and match the building blocks of hREA’s economic kit into
-                something tailored to your needs, and without technical
-                overhead.
+                Mix and match the building blocks of hREA's economic kit into
+                something tailored to your needs, minimizing technical overhead.
               </p>
             </div>
             <div className="glow-wrapper">
               <BookIcon />
-              <h3>Shared accounting on Distributed Ledger Technology</h3>
+              <h3>
+                Collaborative economic coordination on Distributed Ledger
+                Technology
+              </h3>
               <p>
-                Multiple secure network spaces can exist simultaneously,
-                enabling you to strike the perfect balance between data privacy
-                and data commons. Like the real world, agents are the bridge
-                between networks.
+                Multiple secure network spaces can exist simultaneously and
+                scale to any size, enabling you to strike the perfect balance
+                between data privacy and data commons. Participant relationships
+                form the connections between networks, just like in the real
+                world.
               </p>
             </div>
             <div className="glow-wrapper">
               <PantoneIcon />
-              <h3>Bring-your-own-user-interface with hREA API</h3>
+              <h3>Bring-your-own-user-interface with hREA's Valueflows API</h3>
               <p>
-                Get an entire backend system out-of-the-box, and rely on
-                excellent API documentation for developers on your team to build
-                the tailor made user-interfaces that your scenario needs. Some
-                users can also use the generic system portal.
+                Get an entire backend system out-of-the-box and leverage
+                powerful general-purpose economic planning & accounting tools.
+                Build the tailor-made user interfaces that your scenario needs
+                with our extensively documented APIs and frontend libraries.
               </p>
             </div>
           </div>
@@ -166,7 +169,8 @@ const IndexPage = () => {
                 Organizations and businesses with{" "}
                 <b>cross-stakeholder value chains</b> <b />
                 (think supply chains, joint ventures, multi-company
-                collaboration spaces, or economic networks)
+                collaboration spaces, cooperative and small business economic
+                networks, and more)
               </p>
             </div>
             <div className="glow-wrapper">
@@ -175,7 +179,8 @@ const IndexPage = () => {
                 The parties involved in{" "}
                 <b>loosely coupled economic coordination</b> <b />
                 (think open source projects, artistic collectives, eco villages,
-                DAOs, and more)
+                makerspaces, mutual credit & mutual aid networks, open value
+                networks, DAOs, and more)
               </p>
             </div>
           </div>
@@ -275,10 +280,7 @@ const IndexPage = () => {
             </a>{" "}
             for making a contribution and to get updates on the progress of the
             project. If you have any questions, send an email to{" "}
-            <a
-              className="link primary"
-              href="mailto:hello@hrea.io"
-            >
+            <a className="link primary" href="mailto:hello@hrea.io">
               hello@hrea.io
             </a>
             .
