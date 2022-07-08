@@ -53,7 +53,8 @@ const IndexPage = () => {
             <div className="tags">
               <div className="tag-wrapper">open source</div>
               <div className="tag-wrapper">distributed technology</div>
-              <div className="tag-wrapper">Valueflows specification</div>
+              <div className="tag-wrapper">accounting</div>
+              <div className="tag-wrapper">valueflows ontology</div>
             </div>
             <h1>
               Scalable & distributed <br />
@@ -128,10 +129,7 @@ const IndexPage = () => {
             </div>
             <div className="glow-wrapper">
               <BookIcon />
-              <h3>
-                Economic coordination on Distributed Ledger
-                Technology
-              </h3>
+              <h3>Economic coordination on Distributed Ledger Technology</h3>
               <p>
                 Multiple secure network spaces can exist simultaneously and
                 scale to any size, enabling you to strike the perfect balance

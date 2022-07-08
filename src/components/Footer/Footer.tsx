@@ -13,14 +13,35 @@ const Footer: React.FC<FooterProps> = ({}) => {
     <footer>
       <div className="footer-row first">
         {/* Add sponsor logos with link here*/}
-        <h3>Project 🌳 Oak Sponsor</h3>
-        <a href="https://holo.host" target="_blank">
-          <img
-            className="contributor-logo"
-            src={SponsorLogoHolo}
-            alt="Sponsor Logo Holo Limited"
-          />
-        </a>
+        <div className="contributors-wrapper">
+          <h3>Project 🌳 Oak Sponsors</h3>
+          <a href="https://holo.host" target="_blank">
+            <img
+              className="contributor-logo"
+              src={SponsorLogoHolo}
+              alt="Oak Sponsor Logo Holo Limited"
+            />
+          </a>
+
+          <a
+            className="link primary contributor-name"
+            href="https://twitter.com/EricMeller"
+            target="_blank"
+          >
+            Eric Meller
+          </a>
+        </div>
+
+        <div className="contributors-wrapper">
+          <h3>Project 🌿 Sapling Sponsor</h3>
+          <a
+            className="link primary contributor-name"
+            href="https://twitter.com/matthewjosef"
+            target="_blank"
+          >
+            Matthew Schutte
+          </a>
+        </div>
       </div>
 
       <div className="footer-row second">
@@ -64,8 +85,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
           <a href="https://sprillow.com" target="_blank">
             Sprillow
           </a>
-          .
-          Logo by{" "}
+          . Logo by{" "}
           <a href="https://frugal.systems" target="_blank">
             Pablo Somonte Ruano
           </a>

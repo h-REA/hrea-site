@@ -21,8 +21,8 @@
   --color-text-glow-50: #ebebeb70; //Gallery (50% opacity)
   --color-text-tag: #eae7d2;
 
-  --color-text-link-primary: #e6a1e5;//Medium Lavender Magenta
-  --color-text-link-secondary: #f8cd7b; //Granny Smith Apple 
+  --color-text-link-primary: #e6a1e5; //Medium Lavender Magenta
+  --color-text-link-secondary: #f8cd7b; //Granny Smith Apple
 
   --color-button-primary: #00918a; //Persian Green
   --color-button-secondary: #f4ede72c; //Dawn Pink (20% opacity)
@@ -72,6 +72,9 @@ main {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
 
   @include media-up(desktop) {
     align-items: center;
@@ -184,24 +187,25 @@ p {
       margin-bottom: 0.5rem;
     }
   }
+}
 
-  .link {
-    font-weight: 700;
-    font-variation-settings: "wght" 700;
-    text-decoration: none;
-    transition: 0.2s text-decoration ease;
+.link {
+  font-family: Satoshi, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+  text-decoration: none;
+  transition: 0.2s text-decoration ease;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 
-    &.primary {
-      color: var(--color-text-link-primary);
-    }
+  &.primary {
+    color: var(--color-text-link-primary);
+  }
 
-    &.secondary {
-      color: var(--color-text-link-secondary);
-    }
+  &.secondary {
+    color: var(--color-text-link-secondary);
   }
 }
 
@@ -228,6 +232,12 @@ p {
     width: 68rem;
     margin: 0 6rem;
     justify-content: center;
+  }
+
+  @include media-down(tablet) {
+    margin: 0 1rem;
+    min-height: unset;
+    padding: 5rem 0 4rem 0;
   }
 
   @include media-down(mobile) {
@@ -319,6 +329,17 @@ p {
   box-sizing: border-box;
   justify-content: left;
   align-items: flex-start;
+
+  @include media-down(tablet) {
+    min-height: unset;
+
+    @media only screen and (min-height: 1080px) {
+      .glow-wrapper {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+  }
 
   .glow-wrapper {
     max-width: 40rem;
@@ -520,11 +541,15 @@ p {
 // Get involved
 
 .section.get-involved {
-  min-height: 60vh;
+  min-height: 50vh;
   padding-bottom: 2rem;
 
   @include media-up(desktop) {
     width: 68rem;
+  }
+
+  @include media-down(tablet) {
+    min-height: unset;
   }
 }
 

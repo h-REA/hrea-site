@@ -17,6 +17,8 @@ header {
 
   @include media-down(tablet) {
     padding: 0;
+    width: 100vw;
+    box-sizing: border-box;
   }
 
   a.logo {
