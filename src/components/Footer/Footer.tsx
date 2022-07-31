@@ -33,13 +33,27 @@ const Footer: React.FC<FooterProps> = ({}) => {
         </div>
 
         <div className="contributors-wrapper">
-          <h3>Project 🌿 Sapling Sponsor</h3>
+          <h3>Project 🌿 Sapling Sponsors</h3>
           <a
             className="link primary contributor-name"
             href="https://twitter.com/matthewjosef"
             target="_blank"
           >
             Matthew Schutte
+          </a>
+          <a
+            className="link primary contributor-name"
+            href="https://lightningrodlabs.org"
+            target="_blank"
+          >
+            Lightningrod Labs
+          </a>
+          <a
+            className="link primary contributor-name"
+            href={null}
+            target="_blank"
+          >
+            The Geek Gene
           </a>
         </div>
       </div>
