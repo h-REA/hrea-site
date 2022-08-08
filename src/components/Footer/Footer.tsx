@@ -85,6 +85,13 @@ const Footer: React.FC<FooterProps> = ({}) => {
           </a>
           <a
             className="social-link"
+            href="https://docs.hrea.io"
+            target="_blank"
+          >
+            Docs
+          </a>
+          <a
+            className="social-link"
             href="https://github.com/h-rea"
             target="_blank"
           >

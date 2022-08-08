@@ -46,12 +46,12 @@ const Header: React.FC<HeaderProps> = ({}) => {
       <NavLinks />
       {/* Social Links */}
       <div className="social-links-wrapper">
-        <a
+      <a
           className="social-link"
-          href="https://discord.gg/um4UsxdFDk"
+          href="https://docs.hrea.io"
           target="_blank"
         >
-          Discord
+          Docs
         </a>
         <a
           className="social-link"
