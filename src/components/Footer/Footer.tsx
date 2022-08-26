@@ -30,6 +30,14 @@ const Footer: React.FC<FooterProps> = ({}) => {
           >
             Eric Meller
           </a>
+
+          <a
+            className="link primary contributor-name"
+            href="https://linkedin.com/in/thomas-miller-3895833b"
+            target="_blank"
+          >
+            Thomas Miller
+          </a>
         </div>
 
         <div className="contributors-wrapper">
