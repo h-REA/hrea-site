@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1018.625" height="120" viewBox="0 0 1018.625 91">
   <g id="funding-goal-progress-vis" transform="translate(4.375 -98.256)">
     <line id="funding-goal-bar" x2="995" transform="translate(5.75 141.189)" fill="none" stroke="#e0e0e0" stroke-linecap="round" stroke-width="20"/>
-    <line id="funding-progress-bar" x2="796" transform="translate(5.625 141.189)" fill="none" stroke="#00ada5" stroke-linecap="round" stroke-width="20"/>
-    <text id="_41K_USD" data-name="$41K USD" transform="translate(750 184.256)" fill="#0eddd3" font-size="20" font-family="Satoshi-Bold, Satoshi" font-weight="700"><tspan x="0" y="0">$41K USD</tspan></text>
+    <line id="funding-progress-bar" x2="915" transform="translate(5.625 141.189)" fill="none" stroke="#00ada5" stroke-linecap="round" stroke-width="20"/>
+    <text id="_47K_USD" data-name="$47K USD" transform="translate(750 184.256)" fill="#0eddd3" font-size="20" font-family="Satoshi-Bold, Satoshi" font-weight="700"><tspan x="0" y="0">$47K USD</tspan></text>
     <text id="_51K_USD" data-name="$51K USD" transform="translate(920 184.256)" fill="#0eddd3" font-size="20" font-family="Satoshi-Bold, Satoshi" font-weight="700"><tspan x="0" y="0">$51K USD</tspan></text>
     <text id="What_has_been_raised_so_far" data-name="What has been raised so far" transform="translate(260 114.256)" fill="#cecece" font-size="16" font-family="Satoshi-Regular, Satoshi"><tspan x="0" y="0">What has been raised so far</tspan></text>
     <text id="Left_to_reach_the" data-name="Left to reach the" transform="translate(820 98)" fill="#d8d8d8" font-size="14" font-family="Satoshi-Regular, Satoshi"><tspan x="0" y="0">Left to reach the</tspan></text>
