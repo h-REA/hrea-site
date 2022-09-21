@@ -38,6 +38,20 @@ const Footer: React.FC<FooterProps> = ({}) => {
           >
             Thomas Miller
           </a>
+          <a
+            className="link primary contributor-name"
+            href="https://www.artbrock.com"
+            target="_blank"
+          >
+            Arthur Brock
+          </a>
+          <a
+            className="link primary contributor-name"
+            href="https://lightningrodlabs.org"
+            target="_blank"
+          >
+            Lightningrod Labs
+          </a>
         </div>
 
         <div className="contributors-wrapper">
@@ -49,13 +63,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
           >
             Matthew Schutte
           </a>
-          <a
-            className="link primary contributor-name"
-            href="https://lightningrodlabs.org"
-            target="_blank"
-          >
-            Lightningrod Labs
-          </a>
+          
           <a
             className="link primary contributor-name"
             href={null}

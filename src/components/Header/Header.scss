@@ -1,19 +1,42 @@
 @import "../../mixin";
 
 header {
-  padding: 0.5rem 2rem 0.5rem 0.25rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1 auto 1;
+  flex-direction: column;
   position: fixed;
   top: 0;
-  z-index: 2;
   width: 100%;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  z-index: 2;
+
+  .header-blurb {
+    font-family: Satoshi, sans-serif;
+    font-weight: 600;
+    font-variation-settings: "wght" 600;
+    color: var(--color-text-p);
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin: 0.5rem 1rem 0.125rem 1rem; 
+    box-sizing: border-box;
+    border-radius: 0.625rem;
+    background-color: var(--color-blurb-bg);
+    box-shadow: 0 0 2rem var(--color-glow);
+    // background-color: yellow;
+    padding: 0.75rem 1.25rem 0.825rem 1.25rem ;
+  }
+
+  .header-inner-wrapper {
+    padding: 0.5rem 2rem 0.5rem 0.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 auto 1;
+
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
   @include media-down(tablet) {
     padding: 0;

@@ -189,7 +189,7 @@ const IndexPage = () => {
           <h3 className="caption">Roadmap</h3>
           {/* Past */}
           <div className="roadmap-subsection">
-            <h2>What’s been done</h2>
+            <h2>“Seed” & “Sprout” Stage </h2>
             <h5>October 2018 - April 2022</h5>
             <p>
               <ol>
@@ -208,15 +208,15 @@ const IndexPage = () => {
                 <li>
                   Around 70% towards the goal of usability of the API for
                   developers accomplished (to be able to implement applications
-                  on top of API)
+                  on top of API).
                 </li>
               </ol>
             </p>
           </div>
           {/* Current */}
           <div className="roadmap-subsection">
-            <h2>Current phase: first Major Milestone Release (MMR)</h2>
-            <h5>May 2022 - August 2022</h5>
+            <h2>First Major Milestone Release (“Sapling”) Developement</h2>
+            <h5>May 2022 - September 2022</h5>
             <p>
               <ol>
                 <li>
@@ -228,22 +228,32 @@ const IndexPage = () => {
                   >
                     Sprillow
                   </a>
-                  , our goal is to reach a 100% usable API (v1.0) for hREA.
+                  , we reached a fully usable API (v0.1.0-beta) for hREA.
                 </li>
-                <li>Basic UI for data visualization of the ledger</li>
+                <li>
+                  Launched accompanying documentation at{" "}
+                  <a
+                    className="link primary"
+                    href="https://docs.hrea.io"
+                    target="_blank"
+                  >
+                    docs.hrea.io
+                  </a>
+                  .
+                </li>
               </ol>
             </p>
           </div>
           {/* Future */}
           <div className="roadmap-subsection">
-            <h2>Beyond the current MMR</h2>
-            <h5>September 2022 onwards</h5>
+            <h2>Post-“Sapling Release” Stage</h2>
+            <h5>October 2022 onwards</h5>
             <p>
               <ol>
-                <li>The first applications on top of hREA are built</li>
-                <li>The API is improved based on feedback gathered</li>
-                <li>The hREA’s Community of Practice is grown</li>
-                <li>Sustainable funding patterns are built</li>
+                <li>The first applications on top of hREA are being built</li>
+                <li>Feedback on the API and documentation is being gathered</li>
+                <li>The hREA's Community of Practice is being grown</li>
+                <li>Sustainable funding patterns are being built</li>
               </ol>
             </p>
           </div>
@@ -262,9 +272,9 @@ const IndexPage = () => {
         <div className="section fund" id="fund">
           <h3 className="caption">Become a sponsor</h3>
           <h2>
-            Help us reach the <br />
-            next major milestone <br />
-            by becoming a sponsor
+            Help us make hREA self-sustaining
+            <br />
+            by becoming a monthly supporter
           </h2>
 
           <p>
@@ -290,7 +300,7 @@ const IndexPage = () => {
           </div>
 
           <div className="mmr-progress">
-            <h3>Current MMR funding goal progress</h3>
+            <h3>First MMR (“Sapling Release”) funding goal</h3>
             <h5>May 2022 - August 2022</h5>
             {/* funding goal progress visual */}
             <div className="funding-visual-wrapper large">

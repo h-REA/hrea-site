@@ -34,32 +34,69 @@ const NavLinks = () => {
 const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <header>
-      <a title="hREA Logo" className="logo" onClick={scrollToHome}>
-        <h1>
-          <div className="hrea-logo-wrapper">
-            <LogoDynamic />
-            
-          </div>
-          {/* <HreaLogo /> */}
-        </h1>
-      </a>
-      <NavLinks />
-      {/* Social Links */}
-      <div className="social-links-wrapper">
-      <a
-          className="social-link"
-          href="https://docs.hrea.io"
-          target="_blank"
-        >
-          Docs
-        </a>
+      {/* Blurb (Announcment) */}
+      <div className="header-blurb">
+        The{" "}
         <a
-          className="social-link"
-          href="https://github.com/h-rea"
+          className="link secondary"
           target="_blank"
+          href="https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta"
         >
-          GitHub
+          “Sapling” 0.1.0-beta release
+        </a>{" "}
+        is out now! 🌿 What will you create?{" "}
+        <a
+          className="link secondary"
+          target="_blank"
+          href="https://docs.hrea.io"
+        >
+          Learn
         </a>
+        ,{" "}
+        <a
+          className="link secondary"
+          target="_blank"
+          href="https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta"
+        >
+          build
+        </a>
+        , and{" "}
+        <a
+          className="link secondary"
+          target="_blank"
+          href="https://github.com/h-REA/hrea/issues"
+        >
+          share
+        </a>{" "}
+        your feedback.
+      </div>
+      <div className="header-inner-wrapper">
+        <a title="hREA Logo" className="logo" onClick={scrollToHome}>
+          <h1>
+            <div className="hrea-logo-wrapper">
+              <LogoDynamic />
+            </div>
+            {/* <HreaLogo /> */}
+          </h1>
+        </a>
+        <NavLinks />
+        {/* Social Links */}
+        <div className="social-links-wrapper">
+          <a
+            className="social-link"
+            href="https://docs.hrea.io"
+            target="_blank"
+          >
+            Docs
+          </a>
+          <a
+            className="social-link"
+            href="https://github.com/h-rea"
+            target="_blank"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
     </header>
   );

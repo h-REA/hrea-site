@@ -9,6 +9,7 @@
   --color-glow: #ebebeb30; //Gallery (20% opacity)
   --color-glow-hover: #ebebeb5a; //Gallery (40% opacity)
   --color-tag-bg: #c4d5b935;
+  --color-blurb-bg: #016368;
 
   --color-text-h1: #f2e9e9; //Soft Peach
   --color-text-h2: #d8eacc; //Zanah
@@ -22,7 +23,7 @@
   --color-text-tag: #eae7d2;
 
   --color-text-link-primary: #e6a1e5; //Medium Lavender Magenta
-  --color-text-link-secondary: #f8cd7b; //Granny Smith Apple
+  --color-text-link-secondary: #ffcf5f; //Granny Smith Apple
 
   --color-button-primary: #00918a; //Persian Green
   --color-button-secondary: #f4ede72c; //Dawn Pink (20% opacity)
@@ -329,6 +330,7 @@ p {
   box-sizing: border-box;
   justify-content: left;
   align-items: flex-start;
+  margin-top: 3rem;
 
   @include media-down(tablet) {
     min-height: unset;
@@ -572,7 +574,10 @@ p {
   display: none;
   position: fixed;
   right: 1rem;
-  top: 1rem;
+  //top without blurb:
+  // top: 1rem;
+  //top with blurb:
+  top: 4rem;
   z-index: 2;
   cursor: pointer;
   padding: 0.5rem;

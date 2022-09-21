@@ -28,7 +28,7 @@
 
       .roadmap-horizontal-cls-4 {
         fill: #707070;
-        font-size: 20px;
+        font-size: 18px;
         font-family: HelveticaNeue, Helvetica Neue;
       }
 
@@ -42,8 +42,9 @@
       }
 
       .roadmap-horizontal-cls-7 {
-        font-size: 14px;
-        font-family: Satoshi-Regular, Satoshi;
+        font-size: 16px;
+        font-family: Satoshi-Medium, Satoshi;
+        font-weight: 500;
       }
 
       .roadmap-horizontal-cls-8 {
@@ -61,14 +62,14 @@
     <filter id="Path_24" x="0" y="15" width="169" height="169" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="10" result="blur"/>
-      <feFlood flood-color="#fff" flood-opacity="0.341"/>
+      <feFlood flood-color="#f5d095"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <filter id="Path_24-2" x="404" y="15" width="169" height="169" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="10" result="blur-2"/>
-      <feFlood flood-color="#fff" flood-opacity="0.341"/>
+      <feFlood flood-color="#f5d095"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
@@ -88,16 +89,17 @@
       </g>
       <text id="Oct_2018" data-name="Oct 2018" class="roadmap-horizontal-cls-3" transform="translate(16 61.751)"><tspan x="0" y="0">Oct 2018</tspan></text>
     </g>
-    <text id="July_2022" data-name="July
-2022" class="roadmap-horizontal-cls-4" transform="translate(692 47.751)"><tspan x="-17.97" y="0">July</tspan><tspan x="-22.24" y="28">2022</tspan></text>
-    <text id="Goal_for_MMR" data-name="Goal for MMR" class="roadmap-horizontal-cls-5" transform="translate(637 137.751)"><tspan x="0" y="0">Goal for MMR</tspan></text>
+    <text id="Sep_2022" data-name="Sep
+2022" class="roadmap-horizontal-cls-4" transform="translate(692 47.751)"><tspan x="-17.97" y="0">Sep</tspan><tspan x="-22.24" y="28">2022</tspan></text>
+    <text id="Goal_for_MMR" data-name="Goal for MMR" class="roadmap-horizontal-cls-6" transform="translate(637 137.751)"><tspan x="8" y="0">The first MMR </tspan><tspan x="-6" y="22">Release ("Sapling")</tspan></text>
+    
     <text id="hREA_ad_hoc_dev_phase_started" data-name="hREA ad hoc 
 dev phase started" class="roadmap-horizontal-cls-6" transform="translate(0 137.751)"><tspan x="0" y="0">hREA ad hoc </tspan><tspan x="0" y="22">dev phase started</tspan></text>
     <text id="Kickstart_of_current_development_phase" data-name="Kickstart of current
-development phase" class="roadmap-horizontal-cls-6" transform="translate(458 137.751)"><tspan x="-68.904" y="0">Kickstart of current</tspan><tspan x="-70.704" y="22">development phase</tspan></text>
+development phase" class="roadmap-horizontal-cls-6" transform="translate(458 137.751)"><tspan x="-68.904" y="0">The first MMR phase</tspan><tspan x="-70.704" y="22">development started</tspan></text>
     <text id="First_applications_on_top_of_hREA_are_built" data-name="First applications
 on top of hREA 
-are built" class="roadmap-horizontal-cls-7" transform="translate(893 87.751)"><tspan x="0" y="0">First applications</tspan><tspan x="0" y="18">on top of hREA </tspan><tspan x="0" y="36">are built</tspan></text>
+are built" class="roadmap-horizontal-cls-7" transform="translate(840 87.751)"><tspan x="0" y="0">Building the first apps</tspan><tspan x="0" y="18">on top of hREA </tspan></text>
     <g id="Group_40" data-name="Group 40" transform="translate(404)">
       <g class="roadmap-horizontal-cls-9" transform="matrix(1, 0, 0, 1, -434, -45.25)">
         <path id="Path_24-5" data-name="Path 24" class="roadmap-horizontal-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(434 45)"/>
@@ -108,7 +110,7 @@ are built" class="roadmap-horizontal-cls-7" transform="translate(893 87.751)"><t
       <g class="roadmap-horizontal-cls-8" transform="matrix(1, 0, 0, 1, -671, -45.25)">
         <path id="Path_24-6" data-name="Path 24" class="roadmap-horizontal-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(671 45)"/>
       </g>
-      <text id="August_2022-2" data-name="August 2022" class="roadmap-horizontal-cls-3" transform="translate(12 61.751)"><tspan x="0" y="0">Aug 2022</tspan></text>
+      <text id="August_2022-2" data-name="August 2022" class="roadmap-horizontal-cls-3" transform="translate(12 61.751)"><tspan x="0" y="0">Sep 2022</tspan></text>
     </g>
   </g>
 </svg>

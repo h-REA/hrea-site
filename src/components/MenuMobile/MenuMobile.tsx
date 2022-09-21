@@ -82,13 +82,12 @@ const MenuMobile: React.FC<MenuMobileProps> = ({ isOpen, closeMenu }) => {
               </nav>{" "}
               {/* Social Links */}
               <div className="social-links-wrapper mobile">
-                {/* TODO: add Discord links */}
                 <a
                   className="social-link"
-                  href="https://discord.com/"
+                  href="https://docs.hrea.io"
                   target="_blank"
                 >
-                  Discord
+                  Docs
                 </a>
                 <a
                   className="social-link"
