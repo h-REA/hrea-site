@@ -301,7 +301,7 @@ const IndexPage = () => {
 
           <div className="mmr-progress">
             <h3>First MMR (“Sapling Release”) funding goal</h3>
-            <h5>May 2022 - August 2022</h5>
+            <h5>May 2022 - September 2022</h5>
             {/* funding goal progress visual */}
             <div className="funding-visual-wrapper large">
               <FundingGoalProgressVis />
