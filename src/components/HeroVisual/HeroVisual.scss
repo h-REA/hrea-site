@@ -14,15 +14,20 @@
     scale: 1.2;
     z-index: -1;
 
+    @include media-up(desktop) {
+      scale: 1.35;
+      left: 0;
+    }
+
+    @media only screen and (max-width: 82.6875rem) {
+      scale: 1.25;
+      left: -8vw;
+      top: 2rem;
+    }
     @include media-down(tablet) {
       scale: 1.15;
       left: -30vw;
       top: 3rem;
-    }
-
-    @include media-up(desktop) {
-      scale: 1.35;
-      left: 0;
     }
 
     .circle {

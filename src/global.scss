@@ -226,7 +226,7 @@ p {
   max-width: 68rem;
   display: flex;
   flex-direction: column;
-  padding: 7rem 0;
+  padding: 6rem 0;
   box-sizing: border-box;
 
   @include media-up(desktop) {
@@ -238,13 +238,13 @@ p {
   @include media-down(tablet) {
     margin: 0 1rem;
     min-height: unset;
-    padding: 6rem 0 4rem 0;
+    padding: 5rem 0 4rem 0;
   }
 
   @include media-down(mobile) {
     margin: 0 1rem;
     min-height: unset;
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
 
   h2 {
@@ -331,6 +331,14 @@ p {
   justify-content: left;
   align-items: flex-start;
   margin-top: 3rem;
+
+  @include media-up(100rem) {
+    padding: 10rem 0;
+  }
+
+  @include media-up(desktop) {
+    padding: 8rem 0;
+  }
 
   @include media-down(tablet) {
     min-height: unset;
