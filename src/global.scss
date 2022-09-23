@@ -226,7 +226,7 @@ p {
   max-width: 68rem;
   display: flex;
   flex-direction: column;
-  padding: 6rem 0;
+  padding: 7rem 0;
   box-sizing: border-box;
 
   @include media-up(desktop) {
@@ -238,13 +238,13 @@ p {
   @include media-down(tablet) {
     margin: 0 1rem;
     min-height: unset;
-    padding: 5rem 0 4rem 0;
+    padding: 6rem 0 4rem 0;
   }
 
   @include media-down(mobile) {
     margin: 0 1rem;
     min-height: unset;
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
 
   h2 {
@@ -334,6 +334,7 @@ p {
 
   @include media-down(tablet) {
     min-height: unset;
+    margin-top: 2.5rem;
 
     @media only screen and (min-height: 1080px) {
       .glow-wrapper {
@@ -341,6 +342,10 @@ p {
         padding-bottom: 6rem;
       }
     }
+  }
+
+  @include media-down(mobile) {
+    margin-top: 3.5rem;
   }
 
   .glow-wrapper {
@@ -572,12 +577,13 @@ p {
 .menu-mobile-icon {
   z-index: 2;
   display: none;
-  position: fixed;
+  position: relative;
+  float: right;
   right: 1rem;
   //top without blurb:
   // top: 1rem;
   //top with blurb:
-  top: 4rem;
+  top: 6.825rem;
   z-index: 2;
   cursor: pointer;
   padding: 0.5rem;
@@ -593,5 +599,13 @@ p {
 
   @include media-down(tablet) {
     display: block;
+  }
+
+  @media only screen and (max-width: 64.9375rem) and (min-width: 60.0625rem) {
+    top: 7rem;
+  }
+
+  @media only screen and (max-width: 28.75rem) {
+    top: 8.125rem;
   }
 }

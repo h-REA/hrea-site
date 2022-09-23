@@ -3,7 +3,7 @@
 header {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 2;
@@ -15,13 +15,16 @@ header {
     color: var(--color-text-p);
     font-size: 1.125rem;
     line-height: 1.5;
-    margin: 0.5rem 1rem 0.125rem 1rem; 
+    margin: 0.5rem 1rem 0.125rem 1rem;
     box-sizing: border-box;
     border-radius: 0.625rem;
     background-color: var(--color-blurb-bg);
     box-shadow: 0 0 2rem var(--color-glow);
-    // background-color: yellow;
-    padding: 0.75rem 1.25rem 0.825rem 1.25rem ;
+    padding: 0.75rem 1.25rem 0.825rem 1.25rem;
+
+    @include media-down(mobile) {
+      font-size: 1rem;
+    }
   }
 
   .header-inner-wrapper {
