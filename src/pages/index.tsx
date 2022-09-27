@@ -215,7 +215,7 @@ const IndexPage = () => {
           </div>
           {/* Current */}
           <div className="roadmap-subsection">
-            <h2>First Major Milestone Release (“Sapling”) Developement</h2>
+            <h2>First Major Milestone Release (“Sapling”) Development</h2>
             <h5>May 2022 - September 2022</h5>
             <p>
               <ol>
