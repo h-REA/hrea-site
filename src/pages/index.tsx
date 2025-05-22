@@ -250,14 +250,49 @@ const IndexPage = () => {
             <h5>October 2022 onwards</h5>
             <p>
               <ol>
-                <li>The first applications on top of hREA are being built</li>
-                <li>Feedback on the API and documentation is being gathered</li>
-                <li>The hREA's Community of Practice is being grown</li>
-                <li>Sustainable funding patterns are being built</li>
+                <li>The first applications on top of hREA are built</li>
+                <li>Feedback on the API and documentation is gathered</li>
+                <li>The hREA's Community of Practice is grown</li>
+                <li>Sustainable funding patterns are built</li>
               </ol>
             </p>
           </div>
 
+          {/* Stage where the first app was build with hREA (Carbon Farm Network) */}
+          <div className="roadmap-subsection">
+            <h2>First App Development</h2>
+            <h5>October 2022 - December 2024</h5>
+            <p>
+              <ol>
+                <li>
+                  The first application on top of hREA are built for {" "}
+                  <a
+                    className="link primary"
+                    href="https://www.nycfnhub.com/"
+                    target="_blank"
+                  >
+                    The NY Textile Lab Fibershed Project
+                  </a>
+                </li>
+                <li>
+                  Feedback on the API and performance is gathered.
+                </li>
+              </ol>
+            </p>
+          </div>
+
+          <div className="roadmap-subsection">
+            {/* stage where speed was increased via a rewrite to respond to what was learned in first app release */}
+            <h2>Performance Improvements</h2>
+            <h5>January 2025 - May 2025</h5>
+            <p>
+              <ol>
+                <li>
+                  A new version of hREA is released with a focus on performance.
+                </li>
+              </ol>
+            </p>
+          </div>
           {/* Roadmap Visual */}
           <div className="roadmap-visual-wrapper horizontal">
             <RoadmapVisHorizontal />
@@ -300,7 +335,7 @@ const IndexPage = () => {
           </div>
 
           <div className="mmr-progress">
-            <h3>First MMR (“Sapling Release”) funding goal</h3>
+            <h3>First MMR (“Sapling Release”) funding goal</h3> 
             <h5>May 2022 - September 2022</h5>
             {/* funding goal progress visual */}
             <div className="funding-visual-wrapper large">

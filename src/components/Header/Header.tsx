@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
           target="_blank"
           href="https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta"
         >
-          “Sapling” 0.1.0-beta release
+          “Sapling” 0.3.0-beta release
         </a>{" "}
         is out now! 🌿 What will you create?{" "}
         <a
