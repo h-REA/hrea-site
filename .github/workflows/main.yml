@@ -12,6 +12,12 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: "Deploy to GitHub Pages"
+        required: false
+        default: false
+        type: boolean
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,23 +38,23 @@ jobs:
       - name: Gatsby Build
         run: npm ci && npm run build
 
-      - name: Setup Pages
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        uses: actions/configure-pages@v4
-
       - name: Upload artifact (test)
         if: github.event_name == 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
+      - name: Setup Pages
+        if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || (github.event_name == 'workflow_dispatch' && inputs.deploy == 'true')
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || (github.event_name == 'workflow_dispatch' && inputs.deploy == 'true')
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || (github.event_name == 'workflow_dispatch' && inputs.deploy == 'true')
         id: deployment
         uses: actions/deploy-pages@v4
