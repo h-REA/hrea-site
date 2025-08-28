@@ -1,54 +1,124 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+# hREA Website
 
-## 🚀 Quick start
+The official website for hREA (Holochain Resource-Event-Agent), built with Gatsby and TypeScript.
 
-1.  **Create a Gatsby site.**
+## 🚀 Getting Started
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+### Prerequisites
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+Before you begin, ensure you have Node.js installed on your system. We recommend using Node Version Manager (nvm) for easy Node.js version management.
 
-2.  **Start developing.**
+#### Installing Node.js with nvm
 
-    Navigate into your new site’s directory and start it up.
+1. **Install nvm** (if you haven't already):
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+   Follow the installation instructions at:
+   https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating
 
-3.  **Open the code and start customizing!**
+   ```bash
+   # After installation, restart your terminal or run:
+   source ~/.bashrc
+   ```
 
-    Your site is now running at http://localhost:8000!
+2. **Install and use the latest LTS Node.js version**:
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+   ```bash
+   # Install the latest LTS version of Node.js
+   nvm install --lts
 
-4.  **Learn more**
+   # Use the LTS version
+   nvm use --lts
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+   # Verify installation
+   node --version
+   npm --version
+   ```
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+### Project Setup
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+1. **Clone the repository** (if you haven't already):
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+   ```bash
+   git clone <repository-url>
+   cd hrea-site
+   ```
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+2. **Install dependencies**:
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+   ```bash
+   npm install
+   ```
 
-## 🚀 Quick start (Gatsby Cloud)
+3. **Start the development server**:
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+   ```bash
+   npm start
+   ```
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+   The site will be available at `http://localhost:8000`
+
+   🎉 **That's it!** Your development environment is now ready.
+
+## 🛠️ Development
+
+### Available Scripts
+
+- `npm start` or `npm run develop` - Start the development server with hot reloading
+- `npm run build` - Build the site for production
+- `npm run serve` - Serve the production build locally
+- `npm run clean` - Clean the Gatsby cache and public folders
+- `npm run typecheck` - Run TypeScript type checking
+
+### Project Structure
+
+```
+src/
+├── pages/           # Website pages (auto-generates routes)
+│   ├── index.tsx    # Homepage (/)
+│   └── 404.tsx      # 404 error page
+├── components/      # Reusable React components
+├── images/          # Static images
+├── svgs/           # SVG icons and graphics
+├── fonts/          # Custom fonts
+└── global.scss     # Global styles
+```
+
+### Modifying Content
+
+#### Adding/Editing Pages
+
+- **Homepage**: Edit `src/pages/index.tsx` to modify the homepage content
+- **New pages**: Create new `.tsx` files in `src/pages/` - they'll automatically become routes
+  - Example: `src/pages/about.tsx` becomes `/about`
+  - Example: `src/pages/contact.tsx` becomes `/contact`
+
+#### Live Development
+
+When you run `npm start`, Gatsby provides:
+
+- **Hot reloading**: Changes to pages and components are reflected instantly
+- **GraphQL playground**: Available at `http://localhost:8000/___graphql`
+- **Error overlay**: Detailed error information displayed in the browser
+
+#### Making Changes
+
+1. **Edit content**: Modify files in `src/pages/` or `src/components/`
+2. **Save the file**: Changes are automatically detected
+3. **View updates**: Your browser will refresh automatically to show the changes
+
+### Styling
+
+- **Global styles**: Edit `src/global.scss`
+- **Component styles**: Each component has its own `.scss` file
+- **SASS support**: The project uses SASS for enhanced CSS capabilities
+
+### Adding Images
+
+Place images in `src/images/` and import them in your components using Gatsby's image processing capabilities.
+
+## 📚 Learn More
+
+- [Gatsby Documentation](https://www.gatsbyjs.com/docs/)
+- [React Documentation](https://reactjs.org/docs/)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [SASS Documentation](https://sass-lang.com/documentation)
