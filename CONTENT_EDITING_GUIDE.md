@@ -31,33 +31,48 @@ The file is structured in sections that correspond to different parts of the web
 
 ### 3. Common Editing Tasks
 
-#### Update Header Announcement
+#### Manage Announcement Bar
+The announcement system now supports multiple pre-configured announcement types that you can easily switch between:
+
+**Switch between announcements:**
 ```json
 "header": {
-  "announcement": {
+  "announcements": {
     "enabled": true,
-    "text": "The \"Sapling\" 0.1.0-beta release is out now! 🌿 What will you create?",
-    "links": {
-      "release": "https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta",
-      "learn": "https://docs.hrea.io",
-      "build": "https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta",
-      "share": "https://github.com/h-REA/hrea/issues"
-    }
+    "current": "release"  // ← Change this to switch announcements
   }
 }
 ```
 
-#### Hide/Show Announcement Bar
-To hide the announcement bar completely, set `enabled` to `false`:
+**Available announcement types:**
+- `"release"` - For new releases and updates (green style with 🌿)
+- `"funding"` - For sponsorship campaigns (blue style with 💝)
+- `"maintenance"` - For system maintenance notices (orange style with ⚠️)
+- `"community"` - For community engagement (purple style with 🤝)
+- `"update"` - For documentation/content updates (blue style with 📢)
+
+**Hide all announcements:**
 ```json
-"announcement": {
+"announcements": {
   "enabled": false,
-  "text": "...",
-  "links": { ... }
+  "current": "release"
 }
 ```
 
-To show it again, change back to `"enabled": true`.
+**Customize announcement content:**
+```json
+"types": {
+  "release": {
+    "style": "success",
+    "icon": "🌿",
+    "text": "Your custom announcement text here!",
+    "actions": [
+      { "text": "Learn More", "href": "https://docs.hrea.io", "external": true },
+      { "text": "Download", "href": "https://github.com/h-rea", "external": true }
+    ]
+  }
+}
+```
 
 #### Update Hero Section
 ```json
@@ -147,17 +162,51 @@ After editing the content file:
 
 ## Examples of Common Updates
 
-### Update Release Information
-Change the announcement text and links when there's a new release:
+### Switch to Funding Campaign
+Change from release announcement to funding campaign:
 
 ```json
-"announcement": {
-  "text": "The \"New Release\" 0.2.0 is out now! 🚀 Try it today!",
-  "links": {
-    "release": "https://github.com/h-REA/hREA/releases/tag/happ-0.2.0",
-    "learn": "https://docs.hrea.io",
-    "build": "https://github.com/h-REA/hREA/releases/tag/happ-0.2.0",
-    "share": "https://github.com/h-REA/hrea/issues"
+"header": {
+  "announcements": {
+    "enabled": true,
+    "current": "funding"  // ← Switch to funding campaign
+  }
+}
+```
+
+### Update Release Information
+Customize the release announcement for a new version:
+
+```json
+"types": {
+  "release": {
+    "style": "success",
+    "icon": "🚀",
+    "text": "hREA v0.2.0 is live! New features include advanced querying and performance improvements.",
+    "actions": [
+      { "text": "What's New", "href": "https://docs.hrea.io/changelog", "external": true, "primary": true },
+      { "text": "Download", "href": "https://github.com/h-REA/hREA/releases/tag/v0.2.0", "external": true }
+    ]
+  }
+}
+```
+
+### Create Maintenance Notice
+Switch to maintenance announcement and customize the message:
+
+```json
+// 1. Switch to maintenance
+"current": "maintenance"
+
+// 2. Customize the maintenance message
+"types": {
+  "maintenance": {
+    "style": "warning",
+    "icon": "🔧", 
+    "text": "Scheduled maintenance: Sunday 3-5 PM UTC. Services will be temporarily unavailable.",
+    "actions": [
+      { "text": "More Info", "href": "/maintenance-details", "external": false }
+    ]
   }
 }
 ```

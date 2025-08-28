@@ -1,13 +1,82 @@
 {
   "header": {
-    "announcement": {
+    "announcements": {
       "enabled": true,
-      "text": "The \"Sapling\" 0.1.0-beta release is out now! 🌿 What will you create?",
-      "links": {
-        "release": "https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta",
-        "learn": "https://docs.hrea.io",
-        "build": "https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta",
-        "share": "https://github.com/h-REA/hrea/issues"
+      "current": "release",
+      "types": {
+        "release": {
+          "style": "success",
+          "icon": "🌿",
+          "text": "The \"Sapling\" 0.1.0-beta release is out now! What will you create?",
+          "actions": [
+            {
+              "text": "Learn",
+              "href": "https://docs.hrea.io",
+              "external": true
+            },
+            {
+              "text": "Download",
+              "href": "https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta",
+              "external": true
+            },
+            {
+              "text": "Share Feedback",
+              "href": "https://github.com/h-REA/hrea/issues",
+              "external": true
+            }
+          ]
+        },
+        "funding": {
+          "style": "info",
+          "icon": "💝",
+          "text": "Support hREA development and help us build the future of economic coordination!",
+          "actions": [
+            {
+              "text": "Become a Sponsor",
+              "href": "https://opencollective.com/hrea",
+              "external": true,
+              "primary": true
+            }
+          ]
+        },
+        "maintenance": {
+          "style": "warning",
+          "icon": "⚠️",
+          "text": "Scheduled maintenance window: Sunday 3-5 PM UTC. Some services may be temporarily unavailable.",
+          "actions": [
+            { "text": "Details", "href": "/maintenance", "external": false }
+          ]
+        },
+        "community": {
+          "style": "primary",
+          "icon": "🤝",
+          "text": "Join our growing community of developers building economic networks with hREA!",
+          "actions": [
+            {
+              "text": "Discord",
+              "href": "https://discord.gg/um4UsxdFDk",
+              "external": true
+            },
+            {
+              "text": "Get Started",
+              "href": "https://docs.hrea.io",
+              "external": true,
+              "primary": true
+            }
+          ]
+        },
+        "update": {
+          "style": "info",
+          "icon": "📢",
+          "text": "Documentation updated with new examples and guides for the latest release.",
+          "actions": [
+            {
+              "text": "View Docs",
+              "href": "https://docs.hrea.io",
+              "external": true
+            }
+          ]
+        }
       }
     },
     "navigation": [

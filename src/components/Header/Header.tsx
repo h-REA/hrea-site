@@ -6,6 +6,7 @@ import HreaLogo from "../../svgs/hrea-logo.svg";
 import { scrollToSection, scrollToHome } from "../Scroll";
 import LogoDynamic from "../LogoDynamic/LogoDynamic";
 import { useContent } from "../../hooks/useContent";
+import Announcement from "../Announcement/Announcement";
 
 export type HeaderProps = {};
 
@@ -28,37 +29,21 @@ const NavLinks = () => {
 const Header: React.FC<HeaderProps> = ({}) => {
   const content = useContent();
 
+  // Get the current announcement
+  const currentAnnouncement = content.header.announcements.enabled && content.header.announcements.current
+    ? content.header.announcements.types[content.header.announcements.current]
+    : null;
+
   return (
     <header>
-      {/* Blurb (Announcement) - Only show if enabled */}
-      {content.header.announcement.enabled && (
-        <div className="header-blurb">
-          {content.header.announcement.text}{" "}
-          <a
-            className="link secondary"
-            target="_blank"
-            href={content.header.announcement.links.learn}
-          >
-            Learn
-          </a>
-          ,{" "}
-          <a
-            className="link secondary"
-            target="_blank"
-            href={content.header.announcement.links.build}
-          >
-            build
-          </a>
-          , and{" "}
-          <a
-            className="link secondary"
-            target="_blank"
-            href={content.header.announcement.links.share}
-          >
-            share
-          </a>{" "}
-          your feedback.
-        </div>
+      {/* Flexible Announcement System */}
+      {currentAnnouncement && (
+        <Announcement
+          style={currentAnnouncement.style}
+          icon={currentAnnouncement.icon}
+          text={currentAnnouncement.text}
+          actions={currentAnnouncement.actions}
+        />
       )}
       <div className="header-inner-wrapper">
         <a title="hREA Logo" className="logo" onClick={scrollToHome}>

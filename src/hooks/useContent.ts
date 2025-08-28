@@ -3,14 +3,21 @@ import contentData from '../content/site-content.json';
 
 export interface SiteContent {
   header: {
-    announcement: {
+    announcements: {
       enabled: boolean;
-      text: string;
-      links: {
-        release: string;
-        learn: string;
-        build: string;
-        share: string;
+      current: string;
+      types: {
+        [key: string]: {
+          style: 'primary' | 'success' | 'warning' | 'info';
+          icon: string;
+          text: string;
+          actions: Array<{
+            text: string;
+            href: string;
+            external: boolean;
+            primary?: boolean;
+          }>;
+        };
       };
     };
     navigation: Array<{ href: string; text: string }>;
