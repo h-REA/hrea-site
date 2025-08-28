@@ -5,26 +5,20 @@ import HreaLogo from "../../svgs/hrea-logo.svg";
 
 import { scrollToSection, scrollToHome } from "../Scroll";
 import LogoDynamic from "../LogoDynamic/LogoDynamic";
+import { useContent } from "../../hooks/useContent";
 
 export type HeaderProps = {};
 
 const NavLinks = () => {
-  const items = [
-    ["/#how-it-works", "How it works"],
-    ["/#who-is-hrea-for", "Who is hREA for"],
-    ["/#roadmap", "Roadmap"],
-    ["/#fund", "Fund"],
-    ["/#get-involved", "Get involved"],
-  ];
+  const content = useContent();
 
   return (
     <nav>
-      {items.map((item, index) => (
+      {content.header.navigation.map((item, index) => (
         <li key={index}>
-          <a href={item[0]} onClick={scrollToSection}>
-            {item[1]}
+          <a href={item.href} onClick={scrollToSection}>
+            {item.text}
           </a>
-          {/* <a href={item[0]}>{item[1]}</a> */}
         </li>
       ))}
     </nav>
@@ -32,23 +26,17 @@ const NavLinks = () => {
 };
 
 const Header: React.FC<HeaderProps> = ({}) => {
+  const content = useContent();
+
   return (
     <header>
       {/* Blurb (Announcment) */}
       <div className="header-blurb">
-        The{" "}
+        {content.header.announcement.text}{" "}
         <a
           className="link secondary"
           target="_blank"
-          href="https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta"
-        >
-          “Sapling” 0.1.0-beta release
-        </a>{" "}
-        is out now! 🌿 What will you create?{" "}
-        <a
-          className="link secondary"
-          target="_blank"
-          href="https://docs.hrea.io"
+          href={content.header.announcement.links.learn}
         >
           Learn
         </a>
@@ -56,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
         <a
           className="link secondary"
           target="_blank"
-          href="https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta"
+          href={content.header.announcement.links.build}
         >
           build
         </a>
@@ -64,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
         <a
           className="link secondary"
           target="_blank"
-          href="https://github.com/h-REA/hrea/issues"
+          href={content.header.announcement.links.share}
         >
           share
         </a>{" "}
@@ -82,20 +70,16 @@ const Header: React.FC<HeaderProps> = ({}) => {
         <NavLinks />
         {/* Social Links */}
         <div className="social-links-wrapper">
-          <a
-            className="social-link"
-            href="https://docs.hrea.io"
-            target="_blank"
-          >
-            Docs
-          </a>
-          <a
-            className="social-link"
-            href="https://github.com/h-rea"
-            target="_blank"
-          >
-            GitHub
-          </a>
+          {content.header.social.map((link, index) => (
+            <a
+              key={index}
+              className="social-link"
+              href={link.href}
+              target="_blank"
+            >
+              {link.text}
+            </a>
+          ))}
         </div>
       </div>
     </header>
