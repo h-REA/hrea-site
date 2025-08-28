@@ -4,6 +4,7 @@ import contentData from '../content/site-content.json';
 export interface SiteContent {
   header: {
     announcement: {
+      enabled: boolean;
       text: string;
       links: {
         release: string;

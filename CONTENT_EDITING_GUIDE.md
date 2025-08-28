@@ -35,6 +35,7 @@ The file is structured in sections that correspond to different parts of the web
 ```json
 "header": {
   "announcement": {
+    "enabled": true,
     "text": "The \"Sapling\" 0.1.0-beta release is out now! 🌿 What will you create?",
     "links": {
       "release": "https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta",
@@ -45,6 +46,18 @@ The file is structured in sections that correspond to different parts of the web
   }
 }
 ```
+
+#### Hide/Show Announcement Bar
+To hide the announcement bar completely, set `enabled` to `false`:
+```json
+"announcement": {
+  "enabled": false,
+  "text": "...",
+  "links": { ... }
+}
+```
+
+To show it again, change back to `"enabled": true`.
 
 #### Update Hero Section
 ```json
@@ -107,6 +120,7 @@ The file is structured in sections that correspond to different parts of the web
 - Roadmap phases and timelines
 - Button text
 - Navigation menu items
+- Show/hide toggles (like `"enabled": true/false` for announcement bar)
 
 ### ❌ Don't Change
 - JSON structure (the property names like "header", "hero", etc.)

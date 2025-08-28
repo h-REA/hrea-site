@@ -1,6 +1,7 @@
 {
   "header": {
     "announcement": {
+      "enabled": true,
       "text": "The \"Sapling\" 0.1.0-beta release is out now! 🌿 What will you create?",
       "links": {
         "release": "https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta",
