@@ -13,7 +13,10 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "cms": "cd cms && npm install && npm start",
+    "cms:install": "cd cms && npm install",
+    "cms:dev": "cd cms && npm run dev"
   },
   "dependencies": {
     "gatsby": "^5.13.7",
