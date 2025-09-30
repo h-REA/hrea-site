@@ -77,10 +77,10 @@ export interface SiteContent {
         period: string;
         items: Array<{
           text: string;
-          link?: {
+          link?: Array<{
             text: string;
             url: string;
-          };
+          }>;
         }>;
       }>;
     };

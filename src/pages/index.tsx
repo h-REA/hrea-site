@@ -187,18 +187,70 @@ const IndexPage = () => {
                 <ol>
                   {phase.items.map((item, itemIndex) => (
                     <li key={itemIndex}>
-                      {item.link ? (
-                        <>
-                          {item.text.split(item.link.text)[0]}
-                          <a
-                            className="link primary"
-                            href={item.link.url}
-                            target="_blank"
-                          >
-                            {item.link.text}
-                          </a>
-                          {item.text.split(item.link.text)[1]}
-                        </>
+                      {item.link && item.link.length > 0 ? (
+                        (() => {
+                          // Create a list of all link positions in the text
+                          const linkPositions: Array<{
+                            start: number;
+                            end: number;
+                            linkIndex: number;
+                            linkItem: { text: string; url: string };
+                          }> = [];
+                          item.link.forEach((linkItem, linkIndex) => {
+                            const position = item.text.indexOf(linkItem.text);
+                            if (position !== -1) {
+                              linkPositions.push({
+                                start: position,
+                                end: position + linkItem.text.length,
+                                linkIndex,
+                                linkItem,
+                              });
+                            }
+                          });
+
+                          // Sort link positions by their position in the text
+                          linkPositions.sort((a, b) => a.start - b.start);
+
+                          // Build the result with text and link elements
+                          const parts = [];
+                          let lastEnd = 0;
+
+                          linkPositions.forEach((linkPos, index) => {
+                            // Add text before this link
+                            if (linkPos.start > lastEnd) {
+                              parts.push(
+                                <span key={`text-${index}-before`}>
+                                  {item.text.substring(lastEnd, linkPos.start)}
+                                </span>
+                              );
+                            }
+
+                            // Add the link element
+                            parts.push(
+                              <a
+                                key={`link-${linkPos.linkIndex}`}
+                                className="link primary"
+                                href={linkPos.linkItem.url}
+                                target="_blank"
+                              >
+                                {linkPos.linkItem.text}
+                              </a>
+                            );
+
+                            lastEnd = linkPos.end;
+                          });
+
+                          // Add any remaining text after all links
+                          if (lastEnd < item.text.length) {
+                            parts.push(
+                              <span key="text-after">
+                                {item.text.substring(lastEnd)}
+                              </span>
+                            );
+                          }
+
+                          return parts;
+                        })()
                       ) : (
                         item.text
                       )}

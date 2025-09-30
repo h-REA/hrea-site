@@ -174,10 +174,12 @@
           "items": [
             {
               "text": "Led by David Hand, hREA project was started, called HoloREA initially.",
-              "link": {
-                "text": "David Hand",
-                "url": "https://github.com/sqykly"
-              }
+              "link": [
+                {
+                  "text": "David Hand",
+                  "url": "https://github.com/sqykly"
+                }
+              ]
             },
             {
               "text": "A demo app was created in Go during Holochain's Go phase."
@@ -190,10 +192,12 @@
           "items": [
             {
               "text": "Led by pospi, hREA project moved to Rust and was continued through ad hoc development.",
-              "link": {
-                "text": "pospi",
-                "url": "https://pospi.spadgos.com"
-              }
+              "link": [
+                {
+                  "text": "pospi",
+                  "url": "https://pospi.spadgos.com"
+                }
+              ]
             },
             {
               "text": "Around 70% towards the goal of usability of the API for developers accomplished (to be able to implement applications on top of API)."
@@ -206,17 +210,21 @@
           "items": [
             {
               "text": "Led by Sprillow, hREA reached a fully usable API (v0.1.0-beta).",
-              "link": {
-                "text": "Sprillow",
-                "url": "https://sprillow.com"
-              }
+              "link": [
+                {
+                  "text": "Sprillow",
+                  "url": "https://sprillow.com"
+                }
+              ]
             },
             {
               "text": "Launched accompanying documentation at docs.hrea.io.",
-              "link": {
-                "text": "docs.hrea.io",
-                "url": "https://docs.hrea.io"
-              }
+              "link": [
+                {
+                  "text": "docs.hrea.io",
+                  "url": "https://docs.hrea.io"
+                }
+              ]
             }
           ]
         },
@@ -226,17 +234,15 @@
           "items": [
             {
               "text": "Led by Leo Bensman, through Lightningrod Labs, the first applications on top of hREA began to be built.",
-              "link": {
-                "text": "Leo Bensman",
-                "url": "https://www.linkedin.com/in/leo-bensman/"
-              }
-            },
-            {
-              "text": "Lightningrod Labs",
-              "link": {
-                "text": "Lightningrod Labs",
-                "url": "https://lightningrodlabs.org/"
-              }
+              "link": [
+                {
+                  "text": "Leo Bensman",
+                  "url": "https://www.linkedin.com/in/leo-bensman/"
+                },
+                {
+                  "text": "Lightningrod Labs",
+                  "url": "https://lightningrodlabs.org/"
+                }]
             },
             {
               "text": "Based on user and developer feedback, hREA continued to be enhanced, including..."
@@ -250,17 +256,16 @@
           "items": [
             {
               "text": "Continuing to be led by Leo Bensman, in collaboration with the Holochain Foundation.",
-              "link": {
-                "text": "Leo Bensman",
-                "url": "https://www.linkedin.com/in/leo-bensman/"
-              }
-            },
-            {
-              "text": "Holochain Foundation",
-              "link": {
-                "text": "Holochain Foundation",
-                "url": "https://www.holochain.org/foundation/"
-              }
+              "link": [
+                {
+                  "text": "Leo Bensman",
+                  "url": "https://www.linkedin.com/in/leo-bensman/"
+                },
+                {
+                  "text": "Holochain Foundation",
+                  "url": "https://www.holochain.org/foundation/"
+                }
+              ]
             },
             {
               "text": "Enhancements based on application project feedback continue."
