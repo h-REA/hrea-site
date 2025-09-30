@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="313" height="636" viewBox="0 0 313 636">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="313" height="830" viewBox="0 0 313 830">
   <defs>
     <style>
       .roadmap-vertical-cls-1 {
@@ -41,66 +41,176 @@
       }
 
       .roadmap-vertical-cls-7 {
-        filter: url(#circle-bg-3);
+        filter: url(#circle-forest);
       }
 
       .roadmap-vertical-cls-8 {
-        filter: url(#circle-bg-2);
+        filter: url(#circle-tree);
       }
 
       .roadmap-vertical-cls-9 {
-        filter: url(#circle-bg);
+        filter: url(#circle-sapling);
+      }
+
+      .roadmap-vertical-cls-10 {
+        filter: url(#circle-sprout);
+      }
+
+      .roadmap-vertical-cls-11 {
+        filter: url(#circle-seed);
+      }
+
+      .roadmap-vertical-cls-12 {
+        filter: url(#circle-sprout-enhanced);
+      }
+
+      .roadmap-vertical-cls-13 {
+        filter: url(#circle-sapling-enhanced);
+      }
+
+      .roadmap-vertical-cls-14 {
+        filter: url(#circle-tree-enhanced);
+      }
+
+      .roadmap-vertical-cls-15 {
+        filter: url(#circle-forest-enhanced);
+      }
+
+      .roadmap-vertical-cls-16 {
+        filter: url(#circle-seed-enhanced);
       }
     </style>
-    <filter id="circle-bg" x="15" y="0" width="169" height="169" filterUnits="userSpaceOnUse">
+    
+    <filter id="circle-seed" x="15" y="0" width="169" height="169" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="10" result="blur"/>
-      <feFlood flood-color="#fff" flood-opacity="0.341"/>
+      <feFlood flood-color="#f5d095"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="circle-bg-2" x="15" y="240" width="169" height="169" filterUnits="userSpaceOnUse">
+    
+    <filter id="circle-seed-enhanced" x="15" y="0" width="169" height="169" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#f5d095"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    
+    <filter id="circle-sprout" x="15" y="120" width="169" height="169" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="10" result="blur-2"/>
       <feFlood flood-color="#fff" flood-opacity="0.341"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="circle-bg-3" x="0" y="378" width="199" height="199" filterUnits="userSpaceOnUse">
+    
+    <filter id="circle-sapling" x="15" y="240" width="169" height="169" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="15" result="blur-3"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
       <feFlood flood-color="#f5d095"/>
       <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    
+    <filter id="circle-tree" x="15" y="360" width="169" height="169" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-4"/>
+      <feFlood flood-color="#fff" flood-opacity="0.341"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    
+    <filter id="circle-forest" x="0" y="480" width="199" height="199" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-5"/>
+      <feFlood flood-color="#f5d095"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    
+    <filter id="circle-sprout-enhanced" x="15" y="120" width="169" height="169" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#f5d095"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    
+    <filter id="circle-sapling-enhanced" x="15" y="240" width="169" height="169" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood flood-color="#f5d095"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    
+    <filter id="circle-tree-enhanced" x="15" y="360" width="169" height="169" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-4"/>
+      <feFlood flood-color="#f5d095"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    
+    <filter id="circle-forest-enhanced" x="0" y="480" width="199" height="199" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-5"/>
+      <feFlood flood-color="#f5d095"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
+  
   <g id="roadmap-vis-vertical" transform="translate(45 30.249)">
-    <line id="Line_1" data-name="Line 1" class="roadmap-vertical-cls-1" y2="549" transform="translate(54.5 54.251)"/>
+    <!-- Main connecting line -->
+    <line id="Line_1" data-name="Line 1" class="roadmap-vertical-cls-1" y2="740" transform="translate(54.5 54.251)"/>
+    
+    <!-- Seed Stage -->
     <g id="roadmap-circle">
-      <g class="roadmap-vertical-cls-9" transform="matrix(1, 0, 0, 1, -45, -30.25)">
-        <path id="circle-bg-4" data-name="circle-bg" class="roadmap-vertical-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(45 30)"/>
+      <g class="roadmap-vertical-cls-16" transform="matrix(1, 0, 0, 1, -45, -30.25)">
+        <path id="circle-seed" data-name="circle-seed" class="roadmap-vertical-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(45 30)"/>
       </g>
-      <text id="Oct_2018" data-name="Oct 2018" class="roadmap-vertical-cls-3" transform="translate(16 61.751)"><tspan x="0" y="0">Oct 2018</tspan></text>
+      <text id="Seed" data-name="Seed" class="roadmap-vertical-cls-3" transform="translate(54.5 61.751)" text-anchor="middle"><tspan x="0" y="0">Seed</tspan></text>
     </g>
-    <text id="Goal_for_MMR" data-name="Goal for MMR" class="roadmap-vertical-cls-4" transform="translate(126 454.751)"><tspan x="0" y="0">Goal for MMR</tspan></text>
-    <text id="hREA_ad_hoc_dev_phase_started" data-name="hREA ad hoc 
-dev phase started" class="roadmap-vertical-cls-5" transform="translate(126 49.751)"><tspan x="0" y="0">hREA ad hoc </tspan><tspan x="0" y="22">dev phase started</tspan></text>
-    <text id="Kickstart_of_current_development_phase" data-name="Kickstart of current
-development phase" class="roadmap-vertical-cls-5" transform="translate(126 289.751)"><tspan x="0" y="0">Kickstart of current</tspan><tspan x="0" y="22">development phase</tspan></text>
-    <text id="First_applications_on_top_of_hREA_are_built" data-name="First applications
-on top of hREA 
-are built" class="roadmap-vertical-cls-6" transform="translate(70 566.751)"><tspan x="0" y="0">First applications</tspan><tspan x="0" y="18">on top of hREA </tspan><tspan x="0" y="36">are built</tspan></text>
-    <g id="roadmap-circle-2" data-name="roadmap-circle" transform="translate(0 240)">
-      <g class="roadmap-vertical-cls-8" transform="matrix(1, 0, 0, 1, -45, -270.25)">
-        <path id="circle-bg-5" data-name="circle-bg" class="roadmap-vertical-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(45 270)"/>
+    
+    <!-- Sprout Stage -->
+    <g id="roadmap-circle-2" data-name="roadmap-circle" transform="translate(0 150)">
+      <g class="roadmap-vertical-cls-12" transform="matrix(1, 0, 0, 1, -45, -150.25)">
+        <path id="circle-sprout" data-name="circle-sprout" class="roadmap-vertical-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(45 150)"/>
       </g>
-      <text id="May_2022" data-name="May 2022" class="roadmap-vertical-cls-3" transform="translate(12 61.751)"><tspan x="0" y="0">May 2022</tspan></text>
+      <text id="Sprout" data-name="Sprout" class="roadmap-vertical-cls-3" transform="translate(54.5 61.751)" text-anchor="middle"><tspan x="0" y="0">Sprout</tspan></text>
     </g>
-    <g id="roadmap-circle-3" data-name="roadmap-circle" transform="translate(0 393)">
-      <g class="roadmap-vertical-cls-7" transform="matrix(1, 0, 0, 1, -45, -423.25)">
-        <path id="circle-bg-6" data-name="circle-bg" class="roadmap-vertical-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(45 423)"/>
+    
+    <!-- Sapling Stage -->
+    <g id="roadmap-circle-3" data-name="roadmap-circle" transform="translate(0 300)">
+      <g class="roadmap-vertical-cls-13" transform="matrix(1, 0, 0, 1, -45, -270.25)">
+        <path id="circle-sapling" data-name="circle-sapling" class="roadmap-vertical-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(45 270)"/>
       </g>
-      <text id="Aug_2022" data-name="Aug 2022" class="roadmap-vertical-cls-3" transform="translate(12 61.751)"><tspan x="0" y="0">Aug 2022</tspan></text>
+      <text id="Sapling" data-name="Sapling" class="roadmap-vertical-cls-3" transform="translate(54.5 61.751)" text-anchor="middle"><tspan x="0" y="0">Sapling</tspan></text>
     </g>
+    
+    <!-- Tree Stage -->
+    <g id="roadmap-circle-4" data-name="roadmap-circle" transform="translate(0 450)">
+      <g class="roadmap-vertical-cls-14" transform="matrix(1, 0, 0, 1, -45, -390.25)">
+        <path id="circle-tree" data-name="circle-tree" class="roadmap-vertical-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(45 390)"/>
+      </g>
+      <text id="Tree" data-name="Tree" class="roadmap-vertical-cls-3" transform="translate(54.5 61.751)" text-anchor="middle"><tspan x="0" y="0">Tree</tspan></text>
+    </g>
+    
+    <!-- Forest Stage -->
+    <g id="roadmap-circle-5" data-name="roadmap-circle" transform="translate(0 600)">
+      <g class="roadmap-vertical-cls-15" transform="matrix(1, 0, 0, 1, -45, -510.25)">
+        <path id="circle-forest" data-name="circle-forest" class="roadmap-vertical-cls-2" d="M54.5,0A54.5,54.5,0,1,1,0,54.5,54.5,54.5,0,0,1,54.5,0Z" transform="translate(45 510)"/>
+      </g>
+      <text id="Forest" data-name="Forest" class="roadmap-vertical-cls-3" transform="translate(54.5 61.751)" text-anchor="middle"><tspan x="0" y="0">Forest</tspan></text>
+    </g>
+    
+    <!-- Description labels -->
+    <text id="Foundation" data-name="Foundation" class="roadmap-vertical-cls-5" transform="translate(120 49.751)"><tspan x="0" y="0">Foundation</tspan><tspan x="0" y="22">Building</tspan></text>
+    <text id="Development" data-name="Development" class="roadmap-vertical-cls-5" transform="translate(120 199.751)"><tspan x="0" y="0">Active</tspan><tspan x="0" y="22">Development</tspan></text>
+    <text id="Milestone" data-name="Milestone" class="roadmap-vertical-cls-5" transform="translate(120 349.751)"><tspan x="0" y="0">First Major</tspan><tspan x="0" y="22">Milestone</tspan></text>
+    <text id="Growth" data-name="Growth" class="roadmap-vertical-cls-5" transform="translate(120 499.751)"><tspan x="0" y="0">System</tspan><tspan x="0" y="22">Growth</tspan></text>
+    <text id="Forest_Growth" data-name="Forest Growth" class="roadmap-vertical-cls-5" transform="translate(120 649.751)"><tspan x="0" y="0">Growing in</tspan><tspan x="0" y="22">the Forest</tspan></text>
   </g>
 </svg>

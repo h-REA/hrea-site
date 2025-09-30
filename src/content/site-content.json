@@ -1,8 +1,8 @@
 {
   "header": {
     "announcements": {
-      "enabled": true,
-      "current": "release",
+      "enabled": false,
+      "current": "",
       "types": {
         "release": {
           "style": "success",
@@ -166,14 +166,30 @@
       ]
     },
     "roadmap": {
-      "caption": "Roadmap",
+      "caption": "History and Roadmap",
       "phases": [
         {
-          "title": "\"Seed\" & \"Sprout\" Stage",
-          "period": "October 2018 - April 2022",
+          "title": "\"Seed\" Stage",
+          "period": "September 2018 - December 2018",
           "items": [
             {
-              "text": "Led by pospi, hREA project started and was continued through ad hoc development.",
+              "text": "Led by David Hand, hREA project was started, called HoloREA initially.",
+              "link": {
+                "text": "David Hand",
+                "url": "https://github.com/sqykly"
+              }
+            },
+            {
+              "text": "A demo app was created in Go during Holochain's Go phase."
+            }
+          ]
+        },
+        {
+          "title": "\"Sprout\" Stage",
+          "period": "January 2019 - April 2022",
+          "items": [
+            {
+              "text": "Led by pospi, hREA project moved to Rust and was continued through ad hoc development.",
               "link": {
                 "text": "pospi",
                 "url": "https://pospi.spadgos.com"
@@ -185,11 +201,11 @@
           ]
         },
         {
-          "title": "First Major Milestone Release (\"Sapling\") Development",
+          "title": "First Major Milestone Release (\"Sapling\")",
           "period": "May 2022 - September 2022",
           "items": [
             {
-              "text": "Led by Sprillow, we reached a fully usable API (v0.1.0-beta) for hREA.",
+              "text": "Led by Sprillow, hREA reached a fully usable API (v0.1.0-beta).",
               "link": {
                 "text": "Sprillow",
                 "url": "https://sprillow.com"
@@ -205,20 +221,58 @@
           ]
         },
         {
-          "title": "Post-\"Sapling Release\" Stage",
-          "period": "October 2022 onwards",
+          "title": "\"Tree\" Stage",
+          "period": "October 2022 - August 2025",
           "items": [
-            { "text": "The first applications on top of hREA are being built" },
             {
-              "text": "Feedback on the API and documentation is being gathered"
+              "text": "Led by Leo Bensman, through Lightningrod Labs, the first applications on top of hREA began to be built.",
+              "link": {
+                "text": "Leo Bensman",
+                "url": "https://www.linkedin.com/in/leo-bensman/"
+              }
             },
-            { "text": "The hREA's Community of Practice is being grown" },
-            { "text": "Sustainable funding patterns are being built" }
+            {
+              "text": "Lightningrod Labs",
+              "link": {
+                "text": "Lightningrod Labs",
+                "url": "https://lightningrodlabs.org/"
+              }
+            },
+            {
+              "text": "Based on user and developer feedback, hREA continued to be enhanced, including..."
+            },
+            { "text": "Full rewrite for performance, integration with Moss." }
+          ]
+        },
+        {
+          "title": "Growing in the Forest",
+          "period": "September 2025 onward",
+          "items": [
+            {
+              "text": "Continuing to be led by Leo Bensman, in collaboration with the Holochain Foundation.",
+              "link": {
+                "text": "Leo Bensman",
+                "url": "https://www.linkedin.com/in/leo-bensman/"
+              }
+            },
+            {
+              "text": "Holochain Foundation",
+              "link": {
+                "text": "Holochain Foundation",
+                "url": "https://www.holochain.org/foundation/"
+              }
+            },
+            {
+              "text": "Enhancements based on application project feedback continue."
+            },
+            { "text": "The hREA's Community of Practice is being grown." },
+            { "text": "Sustainable funding patterns are being built." }
           ]
         }
       ]
     },
     "funding": {
+      "enabled": false,
       "caption": "Become a sponsor",
       "title": {
         "line1": "Help us make hREA self-sustaining",
@@ -226,12 +280,7 @@
       },
       "description": "Visit hREA's Open Collective page for making a contribution and to get updates on the progress of the project. If you have any questions, send an email to hello@hrea.io.",
       "links": {
-        "opencollective": "https://opencollective.com/hrea",
-        "email": "mailto:hello@hrea.io"
-      },
-      "mmr_goal": {
-        "title": "First MMR (\"Sapling Release\") funding goal",
-        "period": "May 2022 - September 2022"
+        "opencollective": "https://opencollective.com/hrea"
       }
     },
     "get_involved": {
@@ -291,7 +340,6 @@
       "license_url": "http://www.apache.org/licenses/LICENSE-2.0"
     },
     "social": [
-      { "text": "Email", "url": "mailto:hello@hrea.io" },
       { "text": "Discord", "url": "https://discord.gg/um4UsxdFDk" },
       { "text": "Docs", "url": "https://docs.hrea.io" },
       { "text": "GitHub", "url": "https://github.com/h-rea" }

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import contentData from '../content/site-content.json';
+import { useState, useEffect } from "react";
+import contentData from "../content/site-content.json";
 
 export interface SiteContent {
   header: {
@@ -8,7 +8,7 @@ export interface SiteContent {
       current: string;
       types: {
         [key: string]: {
-          style: 'primary' | 'success' | 'warning' | 'info';
+          style: "primary" | "success" | "warning" | "info";
           icon: string;
           text: string;
           actions: Array<{
@@ -85,6 +85,7 @@ export interface SiteContent {
       }>;
     };
     funding: {
+      enabled: boolean;
       caption: string;
       title: {
         line1: string;
@@ -93,11 +94,6 @@ export interface SiteContent {
       description: string;
       links: {
         opencollective: string;
-        email: string;
-      };
-      mmr_goal: {
-        title: string;
-        period: string;
       };
     };
     get_involved: {
@@ -145,7 +141,9 @@ export interface SiteContent {
  * This allows Lynn to edit content in JSON files without touching JSX components
  */
 export const useContent = (): SiteContent => {
-  const [content, setContent] = useState<SiteContent>(contentData as SiteContent);
+  const [content, setContent] = useState<SiteContent>(
+    contentData as SiteContent,
+  );
 
   useEffect(() => {
     // Content is already loaded from JSON import

@@ -26,8 +26,6 @@ import GiftIcon from "../svgs/gift.svg";
 // Roadmap section images
 import RoadmapVisHorizontal from "../svgs/roadmap-vis-horizontal.svg";
 import RoadmapVisVertical from "../svgs/roadmap-vis-vertical.svg";
-import FundingGoalProgressVis from "../svgs/funding-goal-progress-vis.svg";
-import FundingGoalProgressVisSmall from "../svgs/funding-goal-progress-vis-small.svg";
 import { useState } from "react";
 import MenuMobile from "../components/MenuMobile/MenuMobile";
 
@@ -35,7 +33,7 @@ import MenuMobile from "../components/MenuMobile/MenuMobile";
 const IndexPage = () => {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
   const content = useContent();
-  
+
   return (
     <>
       <SEO title="Scalable & distributed framework for economic network coordination" />
@@ -55,7 +53,9 @@ const IndexPage = () => {
             {/* Tags */}
             <div className="tags">
               {content.hero.tags.map((tag, index) => (
-                <div key={index} className="tag-wrapper">{tag}</div>
+                <div key={index} className="tag-wrapper">
+                  {tag}
+                </div>
               ))}
             </div>
             <h1>
@@ -94,7 +94,15 @@ const IndexPage = () => {
             <div className="buttons-row">
               <Button
                 text={content.hero.buttons.learn_more.text}
-                onClick={scrollToSection}
+                onClick={() => {
+                  const fakeEvent = {
+                    preventDefault: () => {},
+                    target: {
+                      dataset: { href: content.hero.buttons.learn_more.href },
+                    },
+                  };
+                  scrollToSection(fakeEvent);
+                }}
                 href={content.hero.buttons.learn_more.href}
               />
               <a href={content.hero.buttons.sponsor.href} target="_blank">
@@ -151,7 +159,8 @@ const IndexPage = () => {
               <BuildingIcon />
               <p>
                 Organizations and businesses with{" "}
-                <b>{content.sections.who_is_for.audiences[0].highlight}</b> <b />
+                <b>{content.sections.who_is_for.audiences[0].highlight}</b>{" "}
+                <b />
                 {content.sections.who_is_for.audiences[0].description}
               </p>
             </div>
@@ -159,7 +168,8 @@ const IndexPage = () => {
               <GiftIcon />
               <p>
                 The parties involved in{" "}
-                <b>{content.sections.who_is_for.audiences[1].highlight}</b> <b />
+                <b>{content.sections.who_is_for.audiences[1].highlight}</b>{" "}
+                <b />
                 {content.sections.who_is_for.audiences[1].description}
               </p>
             </div>
@@ -210,48 +220,37 @@ const IndexPage = () => {
         </div>
 
         {/* Fund / become a sponsor */}
-        <div className="section fund" id="fund">
-          <h3 className="caption">{content.sections.funding.caption}</h3>
-          <h2>
-            {content.sections.funding.title.line1}
-            <br />
-            {content.sections.funding.title.line2}
-          </h2>
+        {content.sections.funding.enabled && (
+          <div className="section fund" id="fund">
+            <h3 className="caption">{content.sections.funding.caption}</h3>
+            <h2>
+              {content.sections.funding.title.line1}
+              <br />
+              {content.sections.funding.title.line2}
+            </h2>
 
-          <p>
-            Visit{" "}
-            <a
-              className="link primary"
-              href={content.sections.funding.links.opencollective}
-              target="_blank"
-            >
-              hREA's Open Collective page
-            </a>{" "}
-            for making a contribution and to get updates on the progress of the
-            project. If you have any questions, send an email to{" "}
-            <a className="link primary" href={content.sections.funding.links.email}>
-              hello@hrea.io
-            </a>
-            .
-          </p>
-          <div className="buttons-row">
-            <a href={content.sections.funding.links.opencollective} target="_blank">
-              <Button text="Become a sponsor" externalLinkIcon />
-            </a>
-          </div>
-
-          <div className="mmr-progress">
-            <h3>{content.sections.funding.mmr_goal.title}</h3>
-            <h5>{content.sections.funding.mmr_goal.period}</h5>
-            {/* funding goal progress visual */}
-            <div className="funding-visual-wrapper large">
-              <FundingGoalProgressVis />
-            </div>
-            <div className="funding-visual-wrapper small">
-              <FundingGoalProgressVisSmall />
+            <p>
+              Visit{" "}
+              <a
+                className="link primary"
+                href={content.sections.funding.links.opencollective}
+                target="_blank"
+              >
+                hREA's Open Collective page
+              </a>{" "}
+              for making a contribution and to get updates on the progress of
+              the project.
+            </p>
+            <div className="buttons-row">
+              <a
+                href={content.sections.funding.links.opencollective}
+                target="_blank"
+              >
+                <Button text="Become a sponsor" externalLinkIcon />
+              </a>
             </div>
           </div>
-        </div>
+        )}
 
         {/* Get involved */}
         <div className="section get-involved" id="get-involved">
