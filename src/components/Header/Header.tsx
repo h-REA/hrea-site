@@ -5,26 +5,21 @@ import HreaLogo from "../../svgs/hrea-logo.svg";
 
 import { scrollToSection, scrollToHome } from "../Scroll";
 import LogoDynamic from "../LogoDynamic/LogoDynamic";
+import { useContent } from "../../hooks/useContent";
+import Announcement from "../Announcement/Announcement";
 
 export type HeaderProps = {};
 
 const NavLinks = () => {
-  const items = [
-    ["/#how-it-works", "How it works"],
-    ["/#who-is-hrea-for", "Who is hREA for"],
-    ["/#roadmap", "Roadmap"],
-    ["/#fund", "Fund"],
-    ["/#get-involved", "Get involved"],
-  ];
+  const content = useContent();
 
   return (
     <nav>
-      {items.map((item, index) => (
+      {content.header.navigation.map((item, index) => (
         <li key={index}>
-          <a href={item[0]} onClick={scrollToSection}>
-            {item[1]}
+          <a href={item.href} onClick={scrollToSection}>
+            {item.text}
           </a>
-          {/* <a href={item[0]}>{item[1]}</a> */}
         </li>
       ))}
     </nav>
@@ -32,44 +27,24 @@ const NavLinks = () => {
 };
 
 const Header: React.FC<HeaderProps> = ({}) => {
+  const content = useContent();
+
+  // Get the current announcement
+  const currentAnnouncement = content.header.announcements.enabled && content.header.announcements.current
+    ? content.header.announcements.types[content.header.announcements.current]
+    : null;
+
   return (
     <header>
-      {/* Blurb (Announcment) */}
-      <div className="header-blurb">
-        The{" "}
-        <a
-          className="link secondary"
-          target="_blank"
-          href="https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta"
-        >
-          “Sapling” 0.1.0-beta release
-        </a>{" "}
-        is out now! 🌿 What will you create?{" "}
-        <a
-          className="link secondary"
-          target="_blank"
-          href="https://docs.hrea.io"
-        >
-          Learn
-        </a>
-        ,{" "}
-        <a
-          className="link secondary"
-          target="_blank"
-          href="https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta"
-        >
-          build
-        </a>
-        , and{" "}
-        <a
-          className="link secondary"
-          target="_blank"
-          href="https://github.com/h-REA/hrea/issues"
-        >
-          share
-        </a>{" "}
-        your feedback.
-      </div>
+      {/* Flexible Announcement System */}
+      {currentAnnouncement && (
+        <Announcement
+          style={currentAnnouncement.style}
+          icon={currentAnnouncement.icon}
+          text={currentAnnouncement.text}
+          actions={currentAnnouncement.actions}
+        />
+      )}
       <div className="header-inner-wrapper">
         <a title="hREA Logo" className="logo" onClick={scrollToHome}>
           <h1>
@@ -82,20 +57,16 @@ const Header: React.FC<HeaderProps> = ({}) => {
         <NavLinks />
         {/* Social Links */}
         <div className="social-links-wrapper">
-          <a
-            className="social-link"
-            href="https://docs.hrea.io"
-            target="_blank"
-          >
-            Docs
-          </a>
-          <a
-            className="social-link"
-            href="https://github.com/h-rea"
-            target="_blank"
-          >
-            GitHub
-          </a>
+          {content.header.social.map((link, index) => (
+            <a
+              key={index}
+              className="social-link"
+              href={link.href}
+              target="_blank"
+            >
+              {link.text}
+            </a>
+          ))}
         </div>
       </div>
     </header>

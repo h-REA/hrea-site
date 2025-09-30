@@ -2,82 +2,63 @@ import React from "react";
 import "./Footer.scss";
 
 // Sponsor logos
-// import SponsorLogoHolo from "../../images/sponsor-logo-holo.png";
-
 import SponsorLogoHolo from "../../images/sponsor-logo-holo.png";
+import { useContent } from "../../hooks/useContent";
 
 export type FooterProps = {};
 
 const Footer: React.FC<FooterProps> = ({}) => {
+  const content = useContent();
+
   return (
     <footer>
       <div className="footer-row first">
-        {/* Add sponsor logos with link here*/}
+        {/* Oak Sponsors */}
         <div className="contributors-wrapper">
-          <h3>Project 🌳 Oak Sponsors</h3>
-          <a href="https://holo.host" target="_blank">
-            <img
-              className="contributor-logo"
-              src={SponsorLogoHolo}
-              alt="Oak Sponsor Logo Holo Limited"
-            />
-          </a>
-
-          <a
-            className="link primary contributor-name"
-            href="https://twitter.com/EricMeller"
-            target="_blank"
-          >
-            Eric Meller
-          </a>
-
-          <a
-            className="link primary contributor-name"
-            href="https://linkedin.com/in/thomas-miller-3895833b"
-            target="_blank"
-          >
-            Thomas Miller
-          </a>
-          <a
-            className="link primary contributor-name"
-            href="https://www.artbrock.com"
-            target="_blank"
-          >
-            Arthur Brock
-          </a>
-          <a
-            className="link primary contributor-name"
-            href="https://lightningrodlabs.org"
-            target="_blank"
-          >
-            Lightningrod Labs
-          </a>
+          <h3>{content.footer.sponsors.oak.title}</h3>
+          {content.footer.sponsors.oak.items.map((sponsor, index) => (
+            <div key={index}>
+              {sponsor.logo ? (
+                <a href={sponsor.url || "#"} target="_blank">
+                  <img
+                    className="contributor-logo"
+                    src={SponsorLogoHolo}
+                    alt={`Oak Sponsor Logo ${sponsor.name}`}
+                  />
+                </a>
+              ) : (
+                <a
+                  className="link primary contributor-name"
+                  href={sponsor.url || "#"}
+                  target="_blank"
+                >
+                  {sponsor.name}
+                </a>
+              )}
+            </div>
+          ))}
         </div>
 
+        {/* Sapling Sponsors */}
         <div className="contributors-wrapper">
-          <h3>Project 🌿 Sapling Sponsors</h3>
-          <a
-            className="link primary contributor-name"
-            href="https://twitter.com/matthewjosef"
-            target="_blank"
-          >
-            Matthew Schutte
-          </a>
-          
-          <a
-            className="link primary contributor-name"
-            href={null}
-            target="_blank"
-          >
-            The Geek Gene
-          </a>
+          <h3>{content.footer.sponsors.sapling.title}</h3>
+          {content.footer.sponsors.sapling.items.map((sponsor, index) => (
+            <a
+              key={index}
+              className="link primary contributor-name"
+              href={sponsor.url || "#"}
+              target="_blank"
+            >
+              {sponsor.name}
+            </a>
+          ))}
         </div>
       </div>
 
       <div className="footer-row second">
         <p>
-          hREA is an open source project licensed under an{" "}
-          <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">
+          {content.footer.legal.text.split('Apache 2.0 license')[0]}
+          <a href={content.footer.legal.license_url} target="_blank">
             Apache 2.0 license
           </a>
           .
@@ -85,46 +66,27 @@ const Footer: React.FC<FooterProps> = ({}) => {
 
         {/* Social Links */}
         <div className="social-links-wrapper">
-          <a
-            className="social-link"
-            href="mailto:hello@hrea.io"
-            target="_blank"
-          >
-            Email
-          </a>
-          <a
-            className="social-link"
-            href="https://discord.gg/um4UsxdFDk"
-            target="_blank"
-          >
-            Discord
-          </a>
-          <a
-            className="social-link"
-            href="https://docs.hrea.io"
-            target="_blank"
-          >
-            Docs
-          </a>
-          <a
-            className="social-link"
-            href="https://github.com/h-rea"
-            target="_blank"
-          >
-            GitHub
-          </a>
+          {content.footer.social.map((link, index) => (
+            <a
+              key={index}
+              className="social-link"
+              href={link.url}
+              target="_blank"
+            >
+              {link.text}
+            </a>
+          ))}
         </div>
       </div>
 
       <div className="footer-row third">
         <p>
-          Landing page visual identity & build by{" "}
-          <a href="https://sprillow.com" target="_blank">
-            Sprillow
+          <a href={content.footer.credits.design.url} target="_blank">
+            {content.footer.credits.design.text}
           </a>
-          . Logo by{" "}
-          <a href="https://frugal.systems" target="_blank">
-            Pablo Somonte Ruano
+          .{" "}
+          <a href={content.footer.credits.logo.url} target="_blank">
+            {content.footer.credits.logo.text}
           </a>
           .
         </p>

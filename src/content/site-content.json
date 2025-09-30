@@ -1,0 +1,358 @@
+{
+  "header": {
+    "announcements": {
+      "enabled": false,
+      "current": "",
+      "types": {
+        "release": {
+          "style": "success",
+          "icon": "🌿",
+          "text": "The \"Sapling\" 0.1.0-beta release is out now! What will you create?",
+          "actions": [
+            {
+              "text": "Learn",
+              "href": "https://docs.hrea.io",
+              "external": true
+            },
+            {
+              "text": "Download",
+              "href": "https://github.com/h-REA/hREA/releases/tag/happ-0.1.0-beta",
+              "external": true
+            },
+            {
+              "text": "Share Feedback",
+              "href": "https://github.com/h-REA/hrea/issues",
+              "external": true
+            }
+          ]
+        },
+        "funding": {
+          "style": "info",
+          "icon": "💝",
+          "text": "Support hREA development and help us build the future of economic coordination!",
+          "actions": [
+            {
+              "text": "Become a Sponsor",
+              "href": "https://opencollective.com/hrea",
+              "external": true,
+              "primary": true
+            }
+          ]
+        },
+        "maintenance": {
+          "style": "warning",
+          "icon": "⚠️",
+          "text": "Scheduled maintenance window: Sunday 3-5 PM UTC. Some services may be temporarily unavailable.",
+          "actions": [
+            { "text": "Details", "href": "/maintenance", "external": false }
+          ]
+        },
+        "community": {
+          "style": "primary",
+          "icon": "🤝",
+          "text": "Join our growing community of developers building economic networks with hREA!",
+          "actions": [
+            {
+              "text": "Discord",
+              "href": "https://discord.gg/um4UsxdFDk",
+              "external": true
+            },
+            {
+              "text": "Get Started",
+              "href": "https://docs.hrea.io",
+              "external": true,
+              "primary": true
+            }
+          ]
+        },
+        "update": {
+          "style": "info",
+          "icon": "📢",
+          "text": "Documentation updated with new examples and guides for the latest release.",
+          "actions": [
+            {
+              "text": "View Docs",
+              "href": "https://docs.hrea.io",
+              "external": true
+            }
+          ]
+        }
+      }
+    },
+    "navigation": [
+      { "href": "/#how-it-works", "text": "How it works" },
+      { "href": "/#who-is-hrea-for", "text": "Who is hREA for" },
+      { "href": "/#roadmap", "text": "Roadmap" },
+      { "href": "/#fund", "text": "Fund" },
+      { "href": "/#get-involved", "text": "Get involved" }
+    ],
+    "social": [
+      { "href": "https://docs.hrea.io", "text": "Docs" },
+      { "href": "https://github.com/h-rea", "text": "GitHub" }
+    ]
+  },
+  "hero": {
+    "tags": [
+      "open source",
+      "distributed technology",
+      "accounting",
+      "valueflows ontology"
+    ],
+    "title": {
+      "line1": "Scalable & distributed",
+      "line2": "framework for economic",
+      "line3": "network coordination"
+    },
+    "description": {
+      "intro": "hREA",
+      "holochain_text": "Holochain",
+      "holochain_url": "https://www.holochain.org/",
+      "rea_text": "Resource-Event-Agent",
+      "rea_url": "https://en.wikipedia.org/wiki/Resources%2C_Events%2C_Agents",
+      "valueflows_text": "Valueflows",
+      "valueflows_url": "http://valueflo.ws/",
+      "main_description": "specification. It enables a transparent and trusted account of resource and information flows between decentralized and independent agents, across and within ecosystems."
+    },
+    "buttons": {
+      "learn_more": {
+        "text": "Learn more",
+        "href": "/#how-it-works"
+      },
+      "sponsor": {
+        "text": "Become a sponsor",
+        "href": "https://opencollective.com/hrea"
+      }
+    }
+  },
+  "sections": {
+    "how_it_works": {
+      "caption": "How it works",
+      "title": {
+        "line1": "Superpowered coordination",
+        "line2": "through integration of",
+        "line3": "Holochain and REA grammars"
+      },
+      "features": [
+        {
+          "title": "Simple, composable, and modular economic building blocks",
+          "description": "Mix and match the building blocks of hREA's economic kit into something tailored to your needs, minimizing technical overhead."
+        },
+        {
+          "title": "Economic coordination on Distributed Ledger Technology",
+          "description": "Multiple secure network spaces can exist simultaneously and scale to any size, enabling you to strike the perfect balance between data privacy and data commons. Participant relationships form the connections between networks, just like in the real world."
+        },
+        {
+          "title": "Bring-your-own-user-interface with hREA's Valueflows API",
+          "description": "Get an entire backend system out-of-the-box and leverage powerful general-purpose economic planning & accounting tools. Build the tailor-made user interfaces that your scenario needs with our extensively documented APIs and frontend libraries."
+        }
+      ]
+    },
+    "who_is_for": {
+      "caption": "Who is hREA for",
+      "title": {
+        "line1": "hREA enables tracking & tracing",
+        "line2": "value flows for conventional",
+        "line3": "and alternative economies alike"
+      },
+      "audiences": [
+        {
+          "highlight": "cross-stakeholder value chains",
+          "description": "(think supply chains, joint ventures, multi-company collaboration spaces, cooperative and small business economic networks, and more)"
+        },
+        {
+          "highlight": "loosely coupled economic coordination",
+          "description": "(think open source projects, artistic collectives, eco villages, makerspaces, mutual credit & mutual aid networks, open value networks, DAOs, and more)"
+        }
+      ]
+    },
+    "roadmap": {
+      "caption": "History and Roadmap",
+      "phases": [
+        {
+          "title": "\"Seed\" Stage",
+          "period": "September 2018 - December 2018",
+          "items": [
+            {
+              "text": "Led by David Hand, hREA project was started, called HoloREA initially.",
+              "link": {
+                "text": "David Hand",
+                "url": "https://github.com/sqykly"
+              }
+            },
+            {
+              "text": "A demo app was created in Go during Holochain's Go phase."
+            }
+          ]
+        },
+        {
+          "title": "\"Sprout\" Stage",
+          "period": "January 2019 - April 2022",
+          "items": [
+            {
+              "text": "Led by pospi, hREA project moved to Rust and was continued through ad hoc development.",
+              "link": {
+                "text": "pospi",
+                "url": "https://pospi.spadgos.com"
+              }
+            },
+            {
+              "text": "Around 70% towards the goal of usability of the API for developers accomplished (to be able to implement applications on top of API)."
+            }
+          ]
+        },
+        {
+          "title": "First Major Milestone Release (\"Sapling\")",
+          "period": "May 2022 - September 2022",
+          "items": [
+            {
+              "text": "Led by Sprillow, hREA reached a fully usable API (v0.1.0-beta).",
+              "link": {
+                "text": "Sprillow",
+                "url": "https://sprillow.com"
+              }
+            },
+            {
+              "text": "Launched accompanying documentation at docs.hrea.io.",
+              "link": {
+                "text": "docs.hrea.io",
+                "url": "https://docs.hrea.io"
+              }
+            }
+          ]
+        },
+        {
+          "title": "\"Tree\" Stage",
+          "period": "October 2022 - August 2025",
+          "items": [
+            {
+              "text": "Led by Leo Bensman, through Lightningrod Labs, the first applications on top of hREA began to be built.",
+              "link": {
+                "text": "Leo Bensman",
+                "url": "https://www.linkedin.com/in/leo-bensman/"
+              }
+            },
+            {
+              "text": "Lightningrod Labs",
+              "link": {
+                "text": "Lightningrod Labs",
+                "url": "https://lightningrodlabs.org/"
+              }
+            },
+            {
+              "text": "Based on user and developer feedback, hREA continued to be enhanced, including..."
+            },
+            { "text": "Full rewrite for performance, integration with Moss." }
+          ]
+        },
+        {
+          "title": "Growing in the Forest",
+          "period": "September 2025 onward",
+          "items": [
+            {
+              "text": "Continuing to be led by Leo Bensman, in collaboration with the Holochain Foundation.",
+              "link": {
+                "text": "Leo Bensman",
+                "url": "https://www.linkedin.com/in/leo-bensman/"
+              }
+            },
+            {
+              "text": "Holochain Foundation",
+              "link": {
+                "text": "Holochain Foundation",
+                "url": "https://www.holochain.org/foundation/"
+              }
+            },
+            {
+              "text": "Enhancements based on application project feedback continue."
+            },
+            { "text": "The hREA's Community of Practice is being grown." },
+            { "text": "Sustainable funding patterns are being built." }
+          ]
+        }
+      ]
+    },
+    "funding": {
+      "enabled": false,
+      "caption": "Become a sponsor",
+      "title": {
+        "line1": "Help us make hREA self-sustaining",
+        "line2": "by becoming a monthly supporter"
+      },
+      "description": "Visit hREA's Open Collective page for making a contribution and to get updates on the progress of the project. If you have any questions, send an email to hello@hrea.io.",
+      "links": {
+        "opencollective": "https://opencollective.com/hrea"
+      }
+    },
+    "get_involved": {
+      "caption": "Get Involved",
+      "title": {
+        "line1": "Join the hREA's",
+        "line2": "community of practice"
+      },
+      "description": "Does hREA sound like something you need or want to work with? Join the hREA discord.",
+      "discord_url": "https://discord.gg/um4UsxdFDk"
+    }
+  },
+  "footer": {
+    "sponsors": {
+      "oak": {
+        "title": "Project 🌳 Oak Sponsors",
+        "items": [
+          {
+            "name": "Holo Limited",
+            "url": "https://holo.host",
+            "logo": true
+          },
+          {
+            "name": "Eric Meller",
+            "url": "https://twitter.com/EricMeller"
+          },
+          {
+            "name": "Thomas Miller",
+            "url": "https://linkedin.com/in/thomas-miller-3895833b"
+          },
+          {
+            "name": "Arthur Brock",
+            "url": "https://www.artbrock.com"
+          },
+          {
+            "name": "Lightningrod Labs",
+            "url": "https://lightningrodlabs.org"
+          }
+        ]
+      },
+      "sapling": {
+        "title": "Project 🌿 Sapling Sponsors",
+        "items": [
+          {
+            "name": "Matthew Schutte",
+            "url": "https://twitter.com/matthewjosef"
+          },
+          {
+            "name": "The Geek Gene",
+            "url": null
+          }
+        ]
+      }
+    },
+    "legal": {
+      "text": "hREA is an open source project licensed under an Apache 2.0 license.",
+      "license_url": "http://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "social": [
+      { "text": "Discord", "url": "https://discord.gg/um4UsxdFDk" },
+      { "text": "Docs", "url": "https://docs.hrea.io" },
+      { "text": "GitHub", "url": "https://github.com/h-rea" }
+    ],
+    "credits": {
+      "design": {
+        "text": "Landing page visual identity & build by Sprillow",
+        "url": "https://sprillow.com"
+      },
+      "logo": {
+        "text": "Logo by Pablo Somonte Ruano",
+        "url": "https://frugal.systems"
+      }
+    }
+  }
+}
